@@ -1,2 +1,2 @@
-# gentee-ru.github.io
+# gentee-ru.docs
 Документация по языку программирования Gentee
