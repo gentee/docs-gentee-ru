@@ -4,23 +4,23 @@ tocru:
   - title: Синтаксис языка
     subfolderitems:
       - page: Лексические элементы
-        url: /docs-gentee-ru/index/leksicheskie-elementy
+        url: /docs-gentee-ru/syntax/leksicheskie-elementy
       - page: Типы
-        url: /docs-gentee-ru/index/tipy
+        url: /docs-gentee-ru/syntax/tipy
       - page: Описания
-        url: /docs-gentee-ru/index/opisaniya
+        url: /docs-gentee-ru/syntax/opisaniya
       - page: Конструкции языка
-        url: /docs-gentee-ru/index/konstrukcii-yazyka
+        url: /docs-gentee-ru/syntax/konstrukcii-yazyka
       - page: Обработка ошибок
-        url: /docs-gentee-ru/index/obrabotka-oshibok
+        url: /docs-gentee-ru/syntax/obrabotka-oshibok
       - page: Выражения
-        url: /docs-gentee-ru/index/vyrazheniya
+        url: /docs-gentee-ru/syntax/vyrazheniya
       - page: Запуск программ
-        url: /docs-gentee-ru/index/zapusk-programm
+        url: /docs-gentee-ru/syntax/zapusk-programm
       - page: Многопоточность
-        url: /docs-gentee-ru/index/mnogopotochnost
+        url: /docs-gentee-ru/syntax/mnogopotochnost
       - page: Включение и импорт файлов
-        url: /docs-gentee-ru/index/vklyuchenie-i-import-failov
+        url: /docs-gentee-ru/syntax/vklyuchenie-i-import-failov
   - title: Стандартная библиотека
     subfolderitems:
       - page: Ассоциативный массив
