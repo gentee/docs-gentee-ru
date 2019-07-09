@@ -1,7 +1,16 @@
 # Table of contents
 
 * [Скриптовый язык программирования Gentee](README.md)
-* [Синтаксис языка](index.md)
+* [Синтаксис языка](index/README.md)
+  * [Лексические элементы](index/leksicheskie-elementy.md)
+  * [Типы](index/tipy.md)
+  * [Описания](index/opisaniya.md)
+  * [Конструкции языка](index/konstrukcii-yazyka.md)
+  * [Обработка ошибок](index/obrabotka-oshibok.md)
+  * [Выражения](index/vyrazheniya.md)
+  * [Запуск программ](index/zapusk-programm.md)
+  * [Многопоточность](index/mnogopotochnost.md)
+  * [Включение и импорт файлов](index/vklyuchenie-i-import-failov.md)
 * [Стандартная библиотека](stdlib/README.md)
   * [Символьный тип](stdlib/char.md)
   * [Процесс](stdlib/process.md)
