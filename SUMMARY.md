@@ -22,3 +22,7 @@
   * [Консоль](stdlib/console.md)
   * [Файлы](stdlib/file.md)
 
+## Сменить язык
+
+* [English](https://docs.gentee.org)
+
