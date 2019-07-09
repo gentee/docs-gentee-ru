@@ -1,5 +1,4 @@
 ---
-nav: tocru
 description: Документация по языку программирования Gentee.
 ---
 
