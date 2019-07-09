@@ -1,26 +1,26 @@
 tocru:
-  - title: Описание языка
+  - page: Язык программирования Gentee
+    url: /docs-gentee-ru/README
+  - title: Синтаксис языка
     subfolderitems:
-      - page: Введение
-        url: /docs-gentee-ru/#%D0%B2%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5
       - page: Лексические элементы
-        url: /docs-gentee-ru/#%D0%BB%D0%B5%D0%BA%D1%81%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B5-%D1%8D%D0%BB%D0%B5%D0%BC%D0%B5%D0%BD%D1%82%D1%8B
+        url: /docs-gentee-ru/index/leksicheskie-elementy.md
       - page: Типы
-        url: /docs-gentee-ru/#%D1%82%D0%B8%D0%BF%D1%8B
+        url: /docs-gentee-ru/index/tipy.md
       - page: Описания
-        url: /docs-gentee-ru/#%D0%BE%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D1%8F
+        url: /docs-gentee-ru/index/opisaniya.md
       - page: Конструкции языка
-        url: /docs-gentee-ru/#%D0%BA%D0%BE%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%86%D0%B8%D0%B8-%D1%8F%D0%B7%D1%8B%D0%BA%D0%B0
+        url: /docs-gentee-ru/index/konstrukcii-yazyka.md
       - page: Обработка ошибок
-        url: /docs-gentee-ru/#%D0%BE%D0%B1%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B0-%D0%BE%D1%88%D0%B8%D0%B1%D0%BE%D0%BA
+        url: /docs-gentee-ru/index/obrabotka-oshibok.md
       - page: Выражения
-        url: /docs-gentee-ru/#%D0%B2%D1%8B%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F
+        url: /docs-gentee-ru/index/vyrazheniya.md
       - page: Запуск программ
-        url: /docs-gentee-ru/#%D0%B7%D0%B0%D0%BF%D1%83%D1%81%D0%BA-%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC
+        url: /docs-gentee-ru/index/zapusk-programm.md
       - page: Многопоточность
-        url: /docs-gentee-ru/#%D0%BC%D0%BD%D0%BE%D0%B3%D0%BE%D0%BF%D0%BE%D1%82%D0%BE%D1%87%D0%BD%D0%BE%D1%81%D1%82%D1%8C
-      - page: Include и import
-        url: /docs-gentee-ru/#include-%D0%B8-import
+        url: /docs-gentee-ru/index/mnogopotochnost.md
+      - page: Включение и импорт файлов
+        url: /docs-gentee-ru/index/vklyuchenie-i-import-failov.md
   - title: Стандартная библиотека
     subfolderitems:
       - page: Ассоциативный массив
@@ -59,7 +59,7 @@ tocru:
         url: /docs-gentee-ru/stdlib/file
       - page: Целые числа
         url: /docs-gentee-ru/stdlib/integer
-  - title: Ссылки
+  - title: Сменить язык
     subfolderitems:
       - page: English
         url: /
