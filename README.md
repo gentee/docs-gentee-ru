@@ -1,4 +1,5 @@
 ---
+nav: tocru
 description: Документация по языку программирования Gentee.
 ---
 
@@ -11,5 +12,9 @@ Gentee является строго-типизированным процеду
 GitHub репозитарий документации: [https://github.com/gentee/docs-gentee-ru](https://github.com/gentee/docs-gentee-ru/)  
 Язык разработки: Go
 
-## 
+## Документация
+
+* [Gentee Programming language (English)](https://docs.gentee.org)
+* [Язык программирования Gentee (Russian)](https://ru.gentee.org)
+
 
