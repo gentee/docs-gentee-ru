@@ -1,5 +1,5 @@
 tocru:
-  - title: Язык программирования Gentee
+  - page: Язык программирования Gentee
     url: /docs-gentee-ru/README
   - title: Синтаксис языка
     subfolderitems:
