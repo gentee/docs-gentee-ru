@@ -14,7 +14,6 @@ GitHub репозитарий документации: [https://github.com/gent
 
 ## Документация
 
-* [Gentee Programming language (English)](https://docs.gentee.org)
-* [Язык программирования Gentee (Russian)](https://ru.gentee.org)
-
+* [Gentee Programming language \(English\)](https://docs.gentee.org)
+* [Язык программирования Gentee \(Russian\)](https://ru.gentee.org)
 
