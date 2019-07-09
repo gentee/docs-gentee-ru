@@ -1,0 +1,65 @@
+tocru:
+  - title: Описание языка
+    subfolderitems:
+      - page: Введение
+        url: /docs-gentee-ru/#%D0%B2%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5
+      - page: Лексические элементы
+        url: /docs-gentee-ru/#%D0%BB%D0%B5%D0%BA%D1%81%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B5-%D1%8D%D0%BB%D0%B5%D0%BC%D0%B5%D0%BD%D1%82%D1%8B
+      - page: Типы
+        url: /docs-gentee-ru/#%D1%82%D0%B8%D0%BF%D1%8B
+      - page: Описания
+        url: /docs-gentee-ru/#%D0%BE%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D1%8F
+      - page: Конструкции языка
+        url: /docs-gentee-ru/#%D0%BA%D0%BE%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%86%D0%B8%D0%B8-%D1%8F%D0%B7%D1%8B%D0%BA%D0%B0
+      - page: Обработка ошибок
+        url: /docs-gentee-ru/#%D0%BE%D0%B1%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B0-%D0%BE%D1%88%D0%B8%D0%B1%D0%BE%D0%BA
+      - page: Выражения
+        url: /docs-gentee-ru/#%D0%B2%D1%8B%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F
+      - page: Запуск программ
+        url: /docs-gentee-ru/#%D0%B7%D0%B0%D0%BF%D1%83%D1%81%D0%BA-%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC
+      - page: Многопоточность
+        url: /docs-gentee-ru/#%D0%BC%D0%BD%D0%BE%D0%B3%D0%BE%D0%BF%D0%BE%D1%82%D0%BE%D1%87%D0%BD%D0%BE%D1%81%D1%82%D1%8C
+      - page: Include и import
+        url: /docs-gentee-ru/#include-%D0%B8-import
+  - title: Стандартная библиотека
+    subfolderitems:
+      - page: Ассоциативный массив
+        url: /docs-gentee-ru/stdlib/map
+      - page: Буфер
+        url: /docs-gentee-ru/stdlib/buffer
+      - page: Время
+        url: /docs-gentee-ru/stdlib/time
+      - page: Действительные числа
+        url: /docs-gentee-ru/stdlib/float
+      - page: Консоль
+        url: /docs-gentee-ru/stdlib/console
+      - page: Контекст
+        url: /docs-gentee-ru/stdlib/context        
+      - page: Логический тип
+        url: /docs-gentee-ru/stdlib/bool
+      - page: Массивы
+        url: /docs-gentee-ru/stdlib/array
+      - page: Многопоточность
+        url: /docs-gentee-ru/stdlib/threads
+      - page: Множества
+        url: /docs-gentee-ru/stdlib/sets
+      - page: Процесс
+        url: /docs-gentee-ru/stdlib/process        
+      - page: Путь
+        url: /docs-gentee-ru/stdlib/path
+      - page: Рантайм
+        url: /docs-gentee-ru/stdlib/runtime
+      - page: Рег. выражения
+        url: /docs-gentee-ru/stdlib/regexp
+      - page: Символы
+        url: /docs-gentee-ru/stdlib/char
+      - page: Строки
+        url: /docs-gentee-ru/stdlib/string
+      - page: Файлы
+        url: /docs-gentee-ru/stdlib/file
+      - page: Целые числа
+        url: /docs-gentee-ru/stdlib/integer
+  - title: Ссылки
+    subfolderitems:
+      - page: English
+        url: /
