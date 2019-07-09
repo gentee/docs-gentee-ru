@@ -1,26 +1,24 @@
 tocru:
-  - page: Язык программирования Gentee
-    url: /docs-gentee-ru/README
   - title: Синтаксис языка
     subfolderitems:
       - page: Лексические элементы
-        url: /docs-gentee-ru/index/leksicheskie-elementy.md
+        url: /docs-gentee-ru/index/leksicheskie-elementy
       - page: Типы
-        url: /docs-gentee-ru/index/tipy.md
+        url: /docs-gentee-ru/index/tipy
       - page: Описания
-        url: /docs-gentee-ru/index/opisaniya.md
+        url: /docs-gentee-ru/index/opisaniya
       - page: Конструкции языка
-        url: /docs-gentee-ru/index/konstrukcii-yazyka.md
+        url: /docs-gentee-ru/index/konstrukcii-yazyka
       - page: Обработка ошибок
-        url: /docs-gentee-ru/index/obrabotka-oshibok.md
+        url: /docs-gentee-ru/index/obrabotka-oshibok
       - page: Выражения
-        url: /docs-gentee-ru/index/vyrazheniya.md
+        url: /docs-gentee-ru/index/vyrazheniya
       - page: Запуск программ
-        url: /docs-gentee-ru/index/zapusk-programm.md
+        url: /docs-gentee-ru/index/zapusk-programm
       - page: Многопоточность
-        url: /docs-gentee-ru/index/mnogopotochnost.md
+        url: /docs-gentee-ru/index/mnogopotochnost
       - page: Включение и импорт файлов
-        url: /docs-gentee-ru/index/vklyuchenie-i-import-failov.md
+        url: /docs-gentee-ru/index/vklyuchenie-i-import-failov
   - title: Стандартная библиотека
     subfolderitems:
       - page: Ассоциативный массив
