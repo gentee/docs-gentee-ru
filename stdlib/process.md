@@ -18,16 +18,16 @@ CmdOptionValues = " " CmdParameters
 --ext "*.txt" .js .html -o=/home/ak/dest /home/ak/in1 /home/ak/in2
 ```
 
-* [Arg\( str name \) str](process.md#argstr-name-str)
-* [Arg\( str name, str def \) str](process.md#argstr-name-str-def-str)
-* [Arg\( str name, int def \) int](process.md#argstr-name-int-def-int)
+* [Arg\( str name \) str](process.md#arg-str-name-str)
+* [Arg\( str name, str def \) str](process.md#arg-str-name-str-def-str)
+* [Arg\( str name, int def \) int](process.md#arg-str-name-int-def-int)
 * [ArgCount\(\) int](process.md#argcount-int)
-* [Args\(\) arr.str](process.md#args-arrstr)
-* [Args\( str name \) arr.str](process.md#argsstr-name-arrstr)
-* [ArgsTail\(\) arr.str](process.md#argstail-arrstr)
-* [IsArg\( str name \) bool](process.md#isargstr-name-bool)
-* [Open\( str path \)](process.md#openstr-path)
-* [OpenWith\( str app, str path \)](process.md#openwithstr-app-str-path)
+* [Args\(\) arr.str](process.md#args-arr-str)
+* [Args\( str name \) arr.str](process.md#args-str-name-arr-str)
+* [ArgsTail\(\) arr.str](process.md#argstail-arr-str)
+* [IsArg\( str name \) bool](process.md#isarg-str-name-bool)
+* [Open\( str path \)](process.md#open-str-path)
+* [OpenWith\( str app, str path \)](process.md#openwith-str-app-str-path)
 
 ## Операторы
 

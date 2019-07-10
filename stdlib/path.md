@@ -2,12 +2,12 @@
 
 Здесь описаны функции для работы с путями разделяемых слешами.
 
-* [AbsPath\( str path \) str](path.md#abspathstr-path-str)
-* [BaseName\( str path \) str](path.md#basenamestr-path-str)
-* [Dir\( str path \) str](path.md#dirstr-path-str)
-* [Ext\( str path \) str](path.md#extstr-path-str)
-* [JoinPath\( str path... \) str](path.md#joinpathstr-path-str)
-* [MatchPath\( str pattern, str path \) bool](path.md#matchpathstr-pattern-str-path-bool)
+* [AbsPath\( str path \) str](path.md#abspath-str-path-str)
+* [BaseName\( str path \) str](path.md#basename-str-path-str)
+* [Dir\( str path \) str](path.md#dir-str-path-str)
+* [Ext\( str path \) str](path.md#ext-str-path-str)
+* [JoinPath\( str path... \) str](path.md#joinpath-str-path-str)
+* [MatchPath\( str pattern, str path \) bool](path.md#matchpath-str-pattern-str-path-bool)
 
 ## Функции
 

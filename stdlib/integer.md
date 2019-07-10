@@ -2,11 +2,11 @@
 
 Здесь описаны операторы и функции для работы с целыми числами типа **int**.
 
-* [bool\( int i \) bool](integer.md#boolint-i-bool)
-* [float\( int i \) float](integer.md#floatint-i-float)
-* [Max\( int l, int r \) int](integer.md#maxint-l-int-r-int)
-* [Min\( int l, int r \) int](integer.md#minint-l-int-r-int)
-* [str\( int i \) str](integer.md#strint-i-str)
+* [bool\( int i \) bool](integer.md#bool-int-i-bool)
+* [float\( int i \) float](integer.md#float-int-i-float)
+* [Max\( int l, int r \) int](integer.md#max-int-l-int-r-int)
+* [Min\( int l, int r \) int](integer.md#min-int-l-int-r-int)
+* [str\( int i \) str](integer.md#str-int-i-str)
 
 ## Операторы
 

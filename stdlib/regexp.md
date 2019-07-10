@@ -2,9 +2,9 @@
 
 Здесь описаны функции для работы с регулярными выражениями.
 
-* [FindRegExp\( str src, str re \) arr.arr.str](regexp.md#findregexpstr-src-str-re-arrarrstr)
-* [Match\( str s, str re \) bool](regexp.md#matchstr-s-str-re-bool)
-* [ReplaceRegExp\( str src, str re, str repl \) str](regexp.md#replaceregexpstr-src-str-re-str-repl-str)
+* [FindRegExp\( str src, str re \) arr.arr.str](regexp.md#findregexp-str-src-str-re-arr-arr-str)
+* [Match\( str s, str re \) bool](regexp.md#match-str-s-str-re-bool)
+* [ReplaceRegExp\( str src, str re, str repl \) str](regexp.md#replaceregexp-str-src-str-re-str-repl-str)
 
 ## Функции
 

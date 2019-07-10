@@ -2,9 +2,9 @@
 
 Здесь описаны функции для работы с консолью.
 
-* [Print\( anytype par... \) int](console.md#printanytype-par-int)
-* [Println\( anytype par... \) int](console.md#printlnanytype-par-int)
-* [ReadString\( str text \) str](console.md#readstringstr-text-str)
+* [Print\( anytype par... \) int](console.md#print-anytype-par-int)
+* [Println\( anytype par... \) int](console.md#println-anytype-par-int)
+* [ReadString\( str text \) str](console.md#readstring-str-text-str)
 
 ## Операторы
 

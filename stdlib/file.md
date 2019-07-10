@@ -2,23 +2,23 @@
 
 Ниже описаны функции для работы с файлами и директориями.
 
-* [AppendFile\( str filename, buf \| str data \)](file.md#appendfilestr-filename-bufstr-data)
-* [ChDir\( str dirname \)](file.md#chdirstr-dirname)
-* [CopyFile\( str src, str dest \) int](file.md#copyfilestr-src-str-dest-int)
-* [CreateDir\( str dirname \)](file.md#createdirstr-dirname)
-* [FileInfo\( str name \) finfo](file.md#fileinfostr-name-finfo)
+* [AppendFile\( str filename, buf \| str data \)](file.md#appendfile-str-filename-buf-str-data)
+* [ChDir\( str dirname \)](file.md#chdir-str-dirname)
+* [CopyFile\( str src, str dest \) int](file.md#copyfile-str-src-str-dest-int)
+* [CreateDir\( str dirname \)](file.md#createdir-str-dirname)
+* [FileInfo\( str name \) finfo](file.md#fileinfo-str-name-finfo)
 * [GetCurDir\(\) str](file.md#getcurdir-str)
-* [ReadDir\( str dirname \) arr.finfo](file.md#readdirstr-dirname-arrfinfo)
-* [ReadFile\( str filename \) str](file.md#readfilestr-filename-str)
-* [ReadFile\( str filename, buf out \) buf](file.md#readfilestr-filename-buf-out-buf)
-* [ReadFile\( str filename, int offset, int length \) buf](file.md#readfilestr-filename-int-offset-int-length-buf)
-* [Remove\( str name \)](file.md#removestr-name)
-* [RemoveDir\( str dirname \)](file.md#removedirstr-dirname)
-* [Rename\( str oldpath, str newpath \)](file.md#renamestr-oldpath-str-newpath)
-* [SetFileTime\( str name, time modtime \)](file.md#setfiletimestr-name-time-modtime)
+* [ReadDir\( str dirname \) arr.finfo](file.md#readdir-str-dirname-arrf-info)
+* [ReadFile\( str filename \) str](file.md#readfile-str-filename-str)
+* [ReadFile\( str filename, buf out \) buf](file.md#readfile-str-filename-buf-out-buf)
+* [ReadFile\( str filename, int offset, int length \) buf](file.md#readfile-str-filename-int-offset-int-length-buf)
+* [Remove\( str name \)](file.md#remove-str-name)
+* [RemoveDir\( str dirname \)](file.md#removedir-str-dirname)
+* [Rename\( str oldpath, str newpath \)](file.md#rename-str-oldpath-str-newpath)
+* [SetFileTime\( str name, time modtime \)](file.md#setfiletime-str-name-time-modtime)
 * [TempDir\(\) str](file.md#tempdir-str)
-* [TempDir\( str path, str prefix \) str](file.md#tempdirstr-path-str-prefix-str)
-* [WriteFile\( str filename, buf \| str data \)](file.md#writefilestr-filename-bufstr-data)
+* [TempDir\( str path, str prefix \) str](file.md#tempdir-str-path-str-prefix-str)
+* [WriteFile\( str filename, buf \| str data \)](file.md#writefile-str-filename-buf-str-data)
 
 ## Типы
 

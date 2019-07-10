@@ -2,18 +2,18 @@
 
 Здесь описаны операторы и функции для работы с датами и временем \(тип **time**\).
 
-* [int\( time t \) int](time.md#inttime-t-int)
-* [time\( int unixtime \) time](time.md#timeint-unixtime-time)
-* [AddHours\( time t, int hours \) time](time.md#addhourstime-t-int-hours-time)
-* [Date\( int year month day \) time](time.md#dateint-year-month-day-time)
-* [DateTime\( int year month day hour minute second \) time](time.md#datetimeint-year-month-day-hour-minute-second-time)
-* [Days\( time t \) int](time.md#daystime-t-int)
-* [Format\( str layout, time t \) str](time.md#formatstr-layout-time-t-str)
+* [int\( time t \) int](time.md#int-time-t-int)
+* [time\( int unixtime \) time](time.md#time-int-unixtime-time)
+* [AddHours\( time t, int hours \) time](time.md#addhours-time-t-int-hours-time)
+* [Date\( int year month day \) time](time.md#date-int-year-month-day-time)
+* [DateTime\( int year month day hour minute second \) time](time.md#datetime-int-year-month-day-hour-minute-second-time)
+* [Days\( time t \) int](time.md#days-time-t-int)
+* [Format\( str layout, time t \) str](time.md#format-str-layout-time-t-str)
 * [Now\( \) time](time.md#now-time)
-* [ParseTime\( str layout, str value \) time](time.md#parsetimestr-layout-str-value-time)
-* [UTC\( time t \) time](time.md#utctime-t-time)
-* [Weekday\( time t \) int](time.md#weekdaytime-t-int)
-* [YearDay\( time t \) int](time.md#yeardaytime-t-int)
+* [ParseTime\( str layout, str value \) time](time.md#parsetime-str-layout-str-value-time)
+* [UTC\( time t \) time](time.md#utc-time-t-time)
+* [Weekday\( time t \) int](time.md#weekday-time-t-int)
+* [YearDay\( time t \) int](time.md#yearday-time-t-int)
 
 ## Типы
 

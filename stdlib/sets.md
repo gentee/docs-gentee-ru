@@ -2,13 +2,13 @@
 
 Здесь описаны операторы и функции для работы с массивом логических значений \(тип **set**\).
 
-* [arr\( set s \) arr.int](sets.md#arrset-s-arrint)
-* [set\( arr.int a \) set](sets.md#setarrint-a-set)
-* [set\( str s \) set](sets.md#setstr-s-set)
-* [str\( set s \) str](sets.md#strset-s-str)
-* [Set\( set s, int index \) set](sets.md#setset-s-int-index-set)
-* [Toggle\( set s, int index \) bool](sets.md#toggleset-s-int-index-bool)
-* [UnSet\( set s, int index \) set](sets.md#unsetset-s-int-index-set)
+* [arr\( set s \) arr.int](sets.md#arr-set-s-arr-int)
+* [set\( arr.int a \) set](sets.md#set-arr-int-a-set)
+* [set\( str s \) set](sets.md#set-str-s-set)
+* [str\( set s \) str](sets.md#str-set-s-str)
+* [Set\( set s, int index \) set](sets.md#set-set-s-int-index-set)
+* [Toggle\( set s, int index \) bool](sets.md#toggle-set-s-int-index-bool)
+* [UnSet\( set s, int index \) set](sets.md#unset-set-s-int-index-set)
 
 ## Операторы
 

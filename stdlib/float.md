@@ -2,15 +2,15 @@
 
 Здесь описаны операторы и функции для работы с действительными числами типа **float**.
 
-* [bool\( float f \) bool](float.md#boolfloat-f-bool)
-* [Ceil\( float f \) int](float.md#ceilfloat-f-int)
-* [Floor\( float f \) int](float.md#floorfloat-f-int)
+* [bool\( float f \) bool](float.md#bool-float-f-bool)
+* [Ceil\( float f \) int](float.md#ceil-float-f-int)
+* [Floor\( float f \) int](float.md#floor-float-f-int)
 * [int\( float f \) int](float.md#intfloat-f-int)
-* [Max\( float fl, float fr \) float](float.md#maxfloat-fl-float-fr-float)
-* [Min\( float fl, float fr \) float](float.md#minfloat-fl-float-fr-float)
-* [Round\( float f \) int](float.md#roundfloat-f-int)
-* [Round\( float f, int digit \) float](float.md#roundfloat-f-int-digit-float)
-* [str\( float f \) str](float.md#strfloat-f-str)
+* [Max\( float fl, float fr \) float](float.md#max-float-fl-float-fr-float)
+* [Min\( float fl, float fr \) float](float.md#min-float-fl-float-fr-float)
+* [Round\( float f \) int](float.md#round-float-f-int)
+* [Round\( float f, int digit \) float](float.md#round-float-f-int-digit-float)
+* [str\( float f \) str](float.md#str-float-f-str)
 
 ## Операторы
 

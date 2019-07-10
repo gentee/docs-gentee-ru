@@ -2,14 +2,14 @@
 
 В языке Gentee отсутствуют глобальные переменные. Одним из способов обмена данными является специальный ассоциативный массив строк. Любая функция может безопасно добавлять туда пары ключ-значение или получать значение по ключу. Кроме этого, в контекст встроена возможность подстановки других существующих значений из контекста. Например, если определены пары _"a": "String A"_ и _"b": "String B"_, то _"\#a\# and \#b\#"_ возвратит _"String A and String B"_. Ниже описаны функции и операторы для работы с контекстом.
 
-* [Ctx\( str input \) str](context.md#ctxstr-input-str)
-* [CtxGet\( str key \) str](context.md#ctxgetstr-key-str)
-* [CtxIs\( str key \) bool](context.md#ctxisstr-key-bool)
-* [CtxSet\( str key, str val \) str](context.md#ctxsetstr-key-str-val-str)
-* [CtxSet\( str key, bool b \) str](context.md#ctxsetstr-key-bool-b-str)
-* [CtxSet\( str key, float f \) str](context.md#ctxsetstr-key-float-f-str)
-* [CtxSet\( str key, int i \) str](context.md#ctxsetstr-key-int-i-str)
-* [CtxValue\( str key \) str](context.md#ctxvaluestr-key-str)
+* [Ctx\( str input \) str](context.md#ctx-str-input-str)
+* [CtxGet\( str key \) str](context.md#ctxget-str-key-str)
+* [CtxIs\( str key \) bool](context.md#ctxis-str-key-bool)
+* [CtxSet\( str key, str val \) str](context.md#ctxset-str-key-str-val-str)
+* [CtxSet\( str key, bool b \) str](context.md#ctxset-str-key-bool-b-str)
+* [CtxSet\( str key, float f \) str](context.md#ctxset-str-key-float-f-str)
+* [CtxSet\( str key, int i \) str](context.md#ctxset-str-key-int-i-str)
+* [CtxValue\( str key \) str](context.md#ctxvalue-str-key-str)
 
 ## Операторы
 

@@ -2,11 +2,11 @@
 
 Здесь описаны функции для работы с виртуальной машиной во время выполнения скрипта.
 
-* [error\( int id, str text, anytype pars... \)](runtime.md#errorint-id-str-text-anytype-pars)
-* [ErrID\( error err \) int](runtime.md#erriderror-err-int)
-* [ErrText\( error err \) str](runtime.md#errtexterror-err-str)
-* [ErrTrace\( error err \) arr.trace](runtime.md#errtraceerror-err-arrtrace)
-* [Trace\(\) arr.trace](runtime.md#trace-arrtrace)
+* [error\( int id, str text, anytype pars... \)](runtime.md#error-int-id-str-text-anytype-pars)
+* [ErrID\( error err \) int](runtime.md#errid-error-err-int)
+* [ErrText\( error err \) str](runtime.md#errtext-error-err-str)
+* [ErrTrace\( error err \) arr.trace](runtime.md#errtrace-error-err-arr-trace)
+* [Trace\(\) arr.trace](runtime.md#trace-arr-trace)
 
 ## Типы
 

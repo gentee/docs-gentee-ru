@@ -2,11 +2,11 @@
 
 Здесь описаны операторы и функции для работы с потоками \(тип **thread**\).
 
-* [resume\( thread th \)](threads.md#resumethread-th)
-* [sleep\( int duration \)](threads.md#sleepint-duration)
-* [suspend\( thread th \)](threads.md#suspendthread-th)
-* [terminate\( thread th \)](threads.md#terminatethread-th)
-* [wait\( thread th \)](threads.md#waitthread-th)
+* [resume\( thread th \)](threads.md#resume-thread-th)
+* [sleep\( int duration \)](threads.md#sleep-int-duration)
+* [suspend\( thread th \)](threads.md#suspend-thread-th)
+* [terminate\( thread th \)](threads.md#terminate-thread-th)
+* [wait\( thread th \)](threads.md#wait-thread-th)
 
 ## Операторы
 
