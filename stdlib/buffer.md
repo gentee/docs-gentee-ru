@@ -2,12 +2,12 @@
 
 Здесь описаны операторы и функции для работы со двоичными данными в виде массива байт \(тип **buf**\).
 
-* [buf\( str s \) buf](buffer.md#bufstr-s-buf)
-* [str\( buf b \) str](buffer.md#strbuf-b-str)
-* [Del\( buf b, int off, int length \) buf](buffer.md#delbuf-b-int-off-int-length-buf)
-* [Hex\( buf b \) str](buffer.md#hexbuf-b-str)
-* [Insert\( buf b, int off, buf src\) buf](buffer.md#insertbuf-b-int-off-buf-src-buf)
-* [UnHex\( str s \) buf](buffer.md#unhexstr-s-buf)
+* [buf\( str s \) buf](buffer.md#buf-str-s-buf)
+* [str\( buf b \) str](buffer.md#str-buf-b-str)
+* [Del\( buf b, int off, int length \) buf](buffer.md#del-buf-b-int-off-int-length-buf)
+* [Hex\( buf b \) str](buffer.md#hex-buf-b-str)
+* [Insert\( buf b, int off, buf src\) buf](buffer.md#insert-buf-b-int-off-buf-src-buf)
+* [UnHex\( str s \) buf](buffer.md#unhex-str-s-buf)
 
 ## Операторы
 

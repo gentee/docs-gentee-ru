@@ -2,8 +2,8 @@
 
 Здесь описаны операторы и функции для работы с символами **char**.
 
-* [int\( char c \) int](char.md#intchar-c-int)
-* [str\( char c \) str](char.md#strchar-c-str)
+* [int\( char c \) int](char.md#int-char-c-int)
+* [str\( char c \) str](char.md#str-char-c-str)
 
 ## Операторы
 
