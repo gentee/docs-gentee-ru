@@ -2,7 +2,7 @@
 
 Здесь описаны операторы и функции для работы с массивами **arr**. Запись **arr.typename** означает, что вы можете указать любой тип, но в случае бинарного оператора, этот тип должен быть одинаковым у обоих массивов.
 
-* [Join\( arr.str a, str sep \) str](array.md#joinarrstr-a-str-sep-str)
+* [Join\( arr.str a, str sep \) str](array.md#join-arrstr-a-str-sep-str)
 * [Sort\( arr.str a \) arr.str](array.md#sort-arrstr-a--arrstr)
 
 ## Операторы

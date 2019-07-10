@@ -2,8 +2,8 @@
 
 Здесь описаны операторы и функции для работы с логическим типом **bool**.
 
-* [int\( bool b \) int](bool.md#intbool-b-int)
-* [str\( bool b \) str](bool.md#strbool-b-str)
+* [int\( bool b \) int](bool.md#int-bool-b-int)
+* [str\( bool b \) str](bool.md#str-bool-b-str)
 
 ## Операторы
 
