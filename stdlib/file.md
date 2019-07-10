@@ -2,13 +2,13 @@
 
 Ниже описаны функции для работы с файлами и директориями.
 
-* [AppendFile\( str filename, buf \| str data \)](file.md#appendfile-str-filename-buf-str-data)
+* [AppendFile\( str filename, buf \| str data \)](file.md#appendfile-str-filename-buf-or-str-data)
 * [ChDir\( str dirname \)](file.md#chdir-str-dirname)
 * [CopyFile\( str src, str dest \) int](file.md#copyfile-str-src-str-dest-int)
 * [CreateDir\( str dirname \)](file.md#createdir-str-dirname)
 * [FileInfo\( str name \) finfo](file.md#fileinfo-str-name-finfo)
 * [GetCurDir\(\) str](file.md#getcurdir-str)
-* [ReadDir\( str dirname \) arr.finfo](file.md#readdir-str-dirname-arrf-info)
+* [ReadDir\( str dirname \) arr.finfo](file.md#readdir-str-dirname-arr-finfo)
 * [ReadFile\( str filename \) str](file.md#readfile-str-filename-str)
 * [ReadFile\( str filename, buf out \) buf](file.md#readfile-str-filename-buf-out-buf)
 * [ReadFile\( str filename, int offset, int length \) buf](file.md#readfile-str-filename-int-offset-int-length-buf)
@@ -18,7 +18,7 @@
 * [SetFileTime\( str name, time modtime \)](file.md#setfiletime-str-name-time-modtime)
 * [TempDir\(\) str](file.md#tempdir-str)
 * [TempDir\( str path, str prefix \) str](file.md#tempdir-str-path-str-prefix-str)
-* [WriteFile\( str filename, buf \| str data \)](file.md#writefile-str-filename-buf-str-data)
+* [WriteFile\( str filename, buf \| str data \)](file.md#writefile-str-filename-buf-or-str-data)
 
 ## Типы
 
