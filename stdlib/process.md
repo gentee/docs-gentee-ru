@@ -28,8 +28,8 @@ CmdOptionValues = " " CmdParameters
 * [IsArg\( str name \) bool](process.md#isarg-str-name-bool)
 * [Open\( str path \)](process.md#open-str-path)
 * [OpenWith\( str app, str path \)](process.md#openwith-str-app-str-path)
-* [Run\( str cmd, str params... \) str](process.md#run-str-cmd-str-params)
-* [Start\( str cmd, str params... \) str](process.md#start-str-cmd-str-params)
+* [Run\( str cmd, str params... \)](process.md#run-str-cmd-str-params)
+* [Start\( str cmd, str params... \)](process.md#start-str-cmd-str-params)
 
 ## Операторы
 
