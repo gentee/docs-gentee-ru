@@ -28,6 +28,8 @@ CmdOptionValues = " " CmdParameters
 * [IsArg\( str name \) bool](process.md#isarg-str-name-bool)
 * [Open\( str path \)](process.md#open-str-path)
 * [OpenWith\( str app, str path \)](process.md#openwith-str-app-str-path)
+* [Run\( str cmd, str params... \) str](process.md#run-str-cmd-str-params-str)
+* [Start\( str cmd, str params... \) str](process.md#start-str-cmd-str-params-str)
 
 ## Операторы
 
@@ -92,3 +94,35 @@ list = ArgsTail() // list == [val0, -value1, value 2]
 
 Функция _OpenWith_ открывает файл, директорию или URI адрес в указанном приложении. Скрипт не ожидает завершения работы.
 
+### Run\(str cmd, str params...\)
+
+__Опциональные параметры__  
+* __buf stdin__ - буфер, который будет передан приложению как стандартный ввод.
+* __buf stdout__ - буфер, в который будет записан стандартный вывод приложения.
+* __buf stderr__ - буфер, в который будет записан стандартный вывод ошибок приложения.
+
+Функция _Run_ запуcкает указанную программу _cmd_ c параметрами и ожидает её окончание. Дополнительно, вы можете переопределить стандартный ввод и вывод.
+
+```go
+    buf dirout
+    Run("dir", stdout: dirout)
+    Run("bash", stdin: buf(
+      |`echo "dirs"
+        #comment    
+        echo "%{str(dirout)}"`
+    ))
+```
+
+### Start\(str cmd, str params...\)
+
+__Опциональные параметры__  
+* __buf stdin__ - буфер, который будет передан приложению как стандартный ввод.
+
+Функция _Start_ запуcкает указанную программу _cmd_ c параметрами и выполняет скрипт дальше. Дополнительно, вы можете передать буфер в качестве стандартного ввода.
+
+```go
+    Start("bash", stdin: buf(
+      |`./myscript1.sh
+        ./myscript2.sh`
+    ))
+```
