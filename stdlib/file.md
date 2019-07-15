@@ -8,6 +8,7 @@
 * [CreateDir\( str dirname \)](file.md#createdir-str-dirname)
 * [FileInfo\( str name \) finfo](file.md#fileinfo-str-name-finfo)
 * [GetCurDir\(\) str](file.md#getcurdir-str)
+* [Md5File\( str filename \) str](file.md#md5file-str-filename-str)
 * [ReadDir\( str dirname \) arr.finfo](file.md#readdir-str-dirname-arr-finfo)
 * [ReadFile\( str filename \) str](file.md#readfile-str-filename-str)
 * [ReadFile\( str filename, buf out \) buf](file.md#readfile-str-filename-buf-out-buf)
@@ -16,6 +17,7 @@
 * [RemoveDir\( str dirname \)](file.md#removedir-str-dirname)
 * [Rename\( str oldpath, str newpath \)](file.md#rename-str-oldpath-str-newpath)
 * [SetFileTime\( str name, time modtime \)](file.md#setfiletime-str-name-time-modtime)
+* [Sha256File\( str filename \) str](file.md#sha256file-str-filename-str)
 * [TempDir\(\) str](file.md#tempdir-str)
 * [TempDir\( str path, str prefix \) str](file.md#tempdir-str-path-str-prefix-str)
 * [WriteFile\( str filename, buf \| str data \)](file.md#writefile-str-filename-buf-or-str-data)
@@ -58,6 +60,10 @@
 
 Функция _GetCurDir_ возвращает текущую директорию.
 
+### Md5File\(str filename\) str
+
+Функция _Md5File_ возвращает MD5 хэш указанного файла в виде шестнадцатеричной строки.
+
 ### ReadDir\(str dirname\) arr.finfo
 
 Функция _ReadDir_ читает директорию с указанным именем и возвращает список её поддиректорий и файлов.
@@ -89,6 +95,10 @@
 ### SetFileTime\(str name, time modtime\)
 
 Функция _SetFileTime_ изменяет время последней записи у указанного файла.
+
+### Sha256File\(str filename\) str
+
+Функция _Sha256File_ возвращает SHA256 хэш указанного файла в виде шестнадцатеричной строки.
 
 ### TempDir\(\) str
 
