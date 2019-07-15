@@ -28,8 +28,8 @@ CmdOptionValues = " " CmdParameters
 * [IsArg\( str name \) bool](process.md#isarg-str-name-bool)
 * [Open\( str path \)](process.md#open-str-path)
 * [OpenWith\( str app, str path \)](process.md#openwith-str-app-str-path)
-* [Run\( str cmd, str params... \) str](process.md#run-str-cmd-str-params-str)
-* [Start\( str cmd, str params... \) str](process.md#start-str-cmd-str-params-str)
+* [Run\( str cmd, str params... \) str](process.md#run-str-cmd-str-params)
+* [Start\( str cmd, str params... \) str](process.md#start-str-cmd-str-params)
 
 ## Операторы
 
@@ -121,6 +121,7 @@ __Опциональные параметры__
 Функция _Start_ запуcкает указанную программу _cmd_ c параметрами и выполняет скрипт дальше. Дополнительно, вы можете передать буфер в качестве стандартного ввода.
 
 ```go
+    Start("echo", "hello, world!")
     Start("bash", stdin: buf(
       |`./myscript1.sh
         ./myscript2.sh`
