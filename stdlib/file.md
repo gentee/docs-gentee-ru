@@ -34,7 +34,7 @@
 * **time Time** - время последнего изменения
 * **bool IsDir** - true, если это директория
 
-## Functions
+## Функции
 
 ### AppendFile\(str filename, buf\|str data\)
 
