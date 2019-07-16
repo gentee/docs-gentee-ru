@@ -17,6 +17,7 @@
   * [Время](stdlib/time.md)
   * [Консоль](stdlib/console.md)
   * [Контекст](stdlib/context.md)
+  * [Криптография](stdlib/kriptografiya.md)
   * [Логический тип](stdlib/bool.md)
   * [Массивы](stdlib/array.md)
   * [Многопоточность](stdlib/threads.md)
