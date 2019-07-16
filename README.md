@@ -11,6 +11,19 @@ Gentee является строго-типизированным процеду
 GitHub репозитарий документации: [https://github.com/gentee/docs-gentee-ru](https://github.com/gentee/docs-gentee-ru/)  
 Язык разработки: Go
 
+```go 
+run : ||"Привет, мир!\r\n"
+```
+```go 
+run : $ echo "Привет, мир!"
+```
+```go 
+run {
+    str name = ReadString(`Укажите ваше имя: `)
+    Println(`Привет, %{ ?(*name>0, name, `мир`) }!` )
+}
+```
+
 ## Документация
 
 * [Gentee Programming language \(English\)](https://docs.gentee.org)
