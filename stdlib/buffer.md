@@ -4,9 +4,11 @@
 
 * [buf\( str s \) buf](buffer.md#buf-str-s-buf)
 * [str\( buf b \) str](buffer.md#str-buf-b-str)
+* [Base64\( buf b \) str](buffer.md#base-64-buf-b-str)
 * [Del\( buf b, int off, int length \) buf](buffer.md#del-buf-b-int-off-int-length-buf)
 * [Hex\( buf b \) str](buffer.md#hex-buf-b-str)
 * [Insert\( buf b, int off, buf src\) buf](buffer.md#insert-buf-b-int-off-buf-src-buf)
+* [UnBase64\( str s \) buf](buffer.md#unbase-64-str-s-buf)
 * [UnHex\( str s \) buf](buffer.md#unhex-str-s-buf)
 
 ## Операторы
@@ -33,6 +35,10 @@
 
 Функция _str_ конвертирует значение типа _buf_ в строку и возвращает её.
 
+### Base64\(buf b\) str
+
+Функция _Base64_ преобразует значение типа _buf_ в строку в кодировке __base64__ и возвращает её.
+
 ### Del\(buf b, int off, int length\) buf
 
 Функция _Del_ удалять часть данных из массива байт. _off_ - смещение удаляемых данных, _length_ - количество удаляемых байт. Если _length_ меньше нуля, то данные будут удаляться слева от указанного смещения. Функция возвращает переменную _b_, в которой произошло удаление.
@@ -44,6 +50,10 @@
 ### Insert\(buf b, int off, buf src\) buf
 
 Функция _Insert_ вставляет массив байт _src_ в массив _b_. _off_ - смещение, куда будет вставлен указанный массив байт. Функция возвращает переменную _b_.
+
+### UnBase64\(str s\) buf
+
+Функция _UnBase64_ преобразует строку в кодировке __base64__ в значение типа _buf_ и возвращает его.
 
 ### UnHex\(str s\) buf
 
