@@ -2,8 +2,8 @@
 
 Ниже описаны криптографические функции.
 
-* [Md5\( buf \| str data \) buf](kriptografiya.md#md-5-buf-or-str-data-buf)
-* [Sha256\( buf \| str data \) buf](kriptografiya.md#sha-256-buf-or-str-data-buf)
+* [Md5\( buf \| str data \) buf](crypto.md#md-5-buf-or-str-data-buf)
+* [Sha256\( buf \| str data \) buf](crypto.md#sha-256-buf-or-str-data-buf)
 
 ## Функции
 
