@@ -11,13 +11,15 @@ Gentee является строго-типизированным процеду
 GitHub репозитарий документации: [https://github.com/gentee/docs-gentee-ru](https://github.com/gentee/docs-gentee-ru/)  
 Язык разработки: Go
 
-```go 
+```go
 run : ||"Привет, мир!\r\n"
 ```
-```go 
+
+```go
 run : $ echo "Привет, мир!"
 ```
-```go 
+
+```go
 run {
     str name = ReadString(`Укажите ваше имя: `)
     Println(`Привет, %{ ?(*name>0, name, `мир`) }!` )
