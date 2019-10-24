@@ -10,7 +10,7 @@
 * [\(g \*Gentee\) Compile\(input, path string\) \(\*Exec, int, error\)](reference.md#g-gentee-compile-input-path-string-exec-int-error)
 * [\(g \*Gentee\) CompileAndRun\(filename string\) \(interface{}, error\)](reference.md#g-gentee-compileandrun-filename-string-interface-error)
 * [\(g \*Gentee\) CompileAndRun\(filename string\) \(\*Exec, int, error\)](reference.md#g-gentee-compilefile-filename-string-exec-int-error)
-* \(exec \*Exec\) Run\(settings Settings\) \(interface{}, error\)
+* [\(exec \*Exec\) Run\(settings Settings\) \(interface{}, error\)](reference.md#exec-exec-run-settings-settings-interface-error)
 * [Version\(\) string](reference.md#version-string)
 
 ## Типы
