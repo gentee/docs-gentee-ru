@@ -34,7 +34,7 @@
   * [Числа с плавающей точкой](stdlib/float.md)
 * [Интеграция с Go](golang/README.md)
   * [Документация](golang/reference.md)
-  * [Использование в go](golang/howtouse.md)
+  * [Компиляция и выполнение](golang/howtouse.md)
   * [Дополнительные возможности](golang/customize.md)
 
 ## Сменить язык
