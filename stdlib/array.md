@@ -3,7 +3,7 @@
 Здесь описаны операторы и функции для работы с массивами **arr**. Запись **arr.typename** означает, что вы можете указать любой тип, но в случае бинарного оператора, этот тип должен быть одинаковым у обоих массивов.
 
 * [Join\( arr.str a, str sep \) str](array.md#join-arr-str-a-str-sep-str)
-* [Reverse\( arr.typename a \) arr.typename](array.md#sort-arr-typename-a-arr-typename)
+* [Reverse\( arr.typename a \) arr.typename](array.md#reverse-arr-typename-a-arr-typename)
 * [Slice\( arr.typename a, int start, int end \) arr.typename](array.md#slice-arr-typename-a-int-start-int-end-arr-typename)
 * [Sort\( arr.str a \) arr.str](array.md#sort-arr-str-a-arr-str)
 
