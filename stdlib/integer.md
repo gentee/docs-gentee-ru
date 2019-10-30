@@ -2,6 +2,7 @@
 
 Здесь описаны операторы и функции для работы с целыми числами типа **int**.
 
+* [Abs\( int x \) int](integer.md#abs-int-x-int)
 * [bool\( int i \) bool](integer.md#bool-int-i-bool)
 * [float\( int i \) float](integer.md#float-int-i-float)
 * [Max\( int l, int r \) int](integer.md#max-int-l-int-r-int)
@@ -44,6 +45,10 @@
 | int **&gt;&gt;=** int | int | Побитовый сдвиг вправо переменной и присваивание ей результата. |
 
 ## Функции
+
+### Abs\(int i\) int
+
+Функция _Abs_ возвращает абсолютное значение числа.
 
 ### bool\(int i\) bool
 
