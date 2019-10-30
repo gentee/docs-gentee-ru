@@ -2,7 +2,7 @@
 
 Здесь описаны операторы и функции для работы с целыми числами типа **int**.
 
-* [Abs\( int x \) int](integer.md#abs-int-x-int)
+* [Abs\( int i \) int](integer.md#abs-int-i-int)
 * [bool\( int i \) bool](integer.md#bool-int-i-bool)
 * [float\( int i \) float](integer.md#float-int-i-float)
 * [Max\( int l, int r \) int](integer.md#max-int-l-int-r-int)
