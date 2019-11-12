@@ -4,6 +4,7 @@
 
 * [Del\( map.typename m, str key \) map.typename](map.md#del-map-typename-m-str-key-map-typename)
 * [IsKey\( map.typename m, str key \) bool](map.md#iskey-map-typename-m-str-key-bool)
+* [Key\( map.typename m, int index \) str](map.md#key-map-typename-m-int-index-str)
 
 ## Операторы
 
@@ -24,3 +25,12 @@
 
 Функция _IsKey_ возвращает _true_, если в ассоциативном массиве _m_ существует значение с указанным ключом и _false_, в противном случае.
 
+### Key\( map.typename m, int index \) str
+
+Функция _Key_ возвращает ключ элемента по его индексу. Эта функция может использовать в цикле *for* для получения ключа элемента.
+
+``` go 
+for val,i in mymap {
+    Println("\(Key(mymap, i)):\(val)")
+}
+```
