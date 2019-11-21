@@ -16,6 +16,8 @@
 * [Replace\( str s, str old, str new \) str](string.md#replace-str-s-str-old-str-new-str)
 * [Split\( str s, str sep \) arr.str](string.md#split-str-s-str-sep-arr-str)
 * [Substr\( str s, int off, int length \) str](string.md#substr-str-s-int-off-int-length-str)
+* [Trim\( str s, str cutset \) str](string.md#trim-str-s-str-cutset-str)
+* [TrimLeft\( str s, str cutset \) str](string.md#trimleft-str-s-str-cutset-str)
 * [TrimRight\( str s, str cutset \) str](string.md#trimright-str-s-str-cutset-str)
 * [TrimSpace\( str s \) str](string.md#trimspace-str-s-str)
 * [Upper\( str s \) string](string.md#upper-str-s-str)
@@ -136,6 +138,14 @@ Format(`%s %v %v %g %6.2[4]f`, `ok`, mya, Now(t), 99.0 + 1.)
 ### Substr\(str s, int off, int length\) str
 
 Функция _Substr_ возвращает подстроку _s_ с указанным смещением и длиной.
+
+### Trim\(str s, str cutset\) str
+
+Функция _Trim_ возвращает подстроку строки _s_ с удалёнными начальными и конечными символами, которые содержатся в строке _cutset_.
+
+### TrimLeft\(str s, str cutset\) str
+
+Функция _TrimLeft_ возвращает подстроку строки _s_ с удалёнными начальными символами, которые содержатся в строке _cutset_.
 
 ### TrimRight\(str s, str cutset\) str
 
