@@ -1,6 +1,13 @@
 # Выражения
 
-Выражение возвращает значение путем применения операторов и функций к операндам. Операндом может быть литерал, идентификатор определяющий константу, переменную, функцию или выражение в скобках. Для вызова функции необходимо указать её имя и в круглых скобках перечислить параметры через запятую. Параметры тоже могут быть выражениями.
+Выражение возвращает значение путем применения операторов и функций к операндам. Операндом может быть литерал, идентификатор определяющий константу, переменную, функцию или выражение в скобках. Для вызова функции необходимо указать её имя и в круглых скобках перечислить параметры через запятую. Параметры тоже могут быть выражениями. Кроме этого, можно выность первый параметр за функцию и отделять его точкой. Это помогает более наглядно указать последовательность вызовов функций. 
+``` go
+(b*c).func3(d).func2(a).func1(10)
+"my string".Upper().TrimRight("g")
+// эквивалентно
+func1(func2(func3( b*c, d ), a), 10)
+TrimRight(Upper("my string"), "g")
+```
 
 ```text
 Operand     = Literal | OperandName | "(" Expression ")" | GoStmt
@@ -8,7 +15,8 @@ Literal     = BasicLiteral
 constLit    = "true" | "false"
 BasicLiteral    = float | integer | stringLit | constLit | charLit
 OperandName = identifier | EnvVariable | FnIdent
-PrimaryExpr = Operand |    FuncName Arguments | IfOp | IndexExp | FieldExpr
+PrimaryExpr = Operand | FuncName Arguments | Expression "." FuncName Arguments | IfOp | 
+              IndexExp | FieldExpr
 OptionalArgs = identifier ":" Expression { "," identifier ":" Expression }
 Arguments    = "(" [ ExpressionList ] [ OptionalArgs ] ")" 
 ExpressionList = Expression { "," Expression } 
