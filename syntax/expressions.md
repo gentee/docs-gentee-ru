@@ -22,11 +22,13 @@ Arguments    = "(" [ ExpressionList ] [ OptionalArgs ] ")"
 ExpressionList = Expression { "," Expression } 
 Expression = UnaryExpr | Expression binaryOp Expression | 
              OperandName assignOp Expression
-UnaryExpr  = PrimaryExpr | unaryOp UnaryExpr | incOp OperandName | OperandName incOp 
+UnaryExpr  = PrimaryExpr | unaryOp UnaryExpr | incOp OperandName | OperandName incOp | 
+             UnaryExpr postunaryOp
 binaryOp  = "||" | "&&" | relOp | mathOp | assignOp | rangeOp
 relOp     = "==" | "!=" | "<" | "<=" | ">" | ">=" 
 mathOp   = "+" | "-" | "|" | "^" | "*" | "/" | "%" | "<<" | ">>" | "&" | 
 unaryOp  = "-" | "!" | "^" | "*" | "#" | "##"
+postunaryOp = "?"
 incOp    = "++" | "--" 
 rangeOp  = ".."
 assignOp = "=" | "+=" | "-=" | "|=" | "^=" | "*=" | "/=" | "%=" | "<<=" | 

@@ -2,6 +2,7 @@
 
 Здесь описаны операторы и функции для работы с массивами **arr**. Запись **arr.typename** означает, что вы можете указать любой тип, но в случае бинарного оператора, этот тип должен быть одинаковым у обоих массивов.
 
+* [bool\( arr.typename a \) bool](array.md#bool-arr-typename-a-bool)
 * [Join\( arr.str a, str sep \) str](array.md#join-arr-str-a-str-sep-str)
 * [Reverse\( arr.typename a \) arr.typename](array.md#reverse-arr-typename-a-arr-typename)
 * [Slice\( arr.typename a, int start, int end \) arr.typename](array.md#slice-arr-typename-a-int-start-int-end-arr-typename)
@@ -12,6 +13,7 @@
 | Оператор | Результат | Описание |
 | :--- | :--- | :--- |
 | **\*** arr.typename | int | Возвращает количество элементов в массиве. |
+| arr.typename **?** | bool | Вызов *bool(arr.typename)*. |
 | arr.typename **=** arr.typename | arr.typename | Присваивание. |
 | arr.typename **&=** arr.typename | arr.typename | Создать клон массива. Новая переменная будет работать с тем же набором данных. |
 | arr.typename **+=** arr.typename | arr.typename | Добавляет элементы из одного массива к другому. |
@@ -23,6 +25,10 @@
 | arr.typename **\[** int **\]** | typename | Присвоить/получить значение массива по индексу. |
 
 ## Функции
+
+### bool\(arr.typename a\) bool
+
+Функция _bool_ возвращает _false_, если массив пустой. В противном случае, возвращается _true_.
 
 ### Join\(arr.str a, str sep\) str
 

@@ -2,6 +2,7 @@
 
 Здесь описаны операторы и функции для работы с ассоциативными массивами **map**. Запись **map.typename** означает, что вы можете указать любой тип, но в случае бинарного оператора, этот тип должен быть одинаковым у обоих массивов.
 
+* [bool\( map.typename m \) bool](map.md#bool-map-typename-m-bool)
 * [Del\( map.typename m, str key \) map.typename](map.md#del-map-typename-m-str-key-map-typename)
 * [IsKey\( map.typename m, str key \) bool](map.md#iskey-map-typename-m-str-key-bool)
 * [Key\( map.typename m, int index \) str](map.md#key-map-typename-m-int-index-str)
@@ -11,11 +12,16 @@
 | Оператор | Результат | Описание |
 | :--- | :--- | :--- |
 | **\*** map.typename | int | Возвращает количество элементов в массиве. |
+| map.typename **?** | bool | Вызов *bool(map.typename)*. |
 | map.typename **=** map.typename | map.typename | Присваивание. |
 | map.typename **&=** map.typename | map.typename | Создать клон ассоциативного массива. Новая переменная будет работать с тем же набором данных. |
 | map.typename **\[** str **\]** | typename | Присвоить/получить значение ассоциативного массива по ключу. |
 
 ## Функции
+
+### bool\(map.typename m\) bool
+
+Функция _bool_ возвращает _false_, если ассоциативный массив пустой. В противном случае, возвращается _true_.
 
 ### Del\( map.typename m, str key \) map.typename
 

@@ -16,6 +16,7 @@
 
 | Оператор | Результат | Описание |
 | :--- | :--- | :--- |
+| float **?** | bool | Вызов *bool(float)*. |
 | float **+** float | float | Сложение двух чисел. |
 | float **+** int | float |  |
 | int **+** float | float |  |
