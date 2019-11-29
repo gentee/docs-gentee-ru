@@ -14,6 +14,7 @@
 * [Lower\( str s \) string](string.md#lower-str-s-str)
 * [Repeat\( str s, int count \) str](string.md#repeat-str-s-int-count-str)
 * [Replace\( str s, str old, str new \) str](string.md#replace-str-s-str-old-str-new-str)
+* [Right\( str s, int i \) string](string.md#right-str-s-int-i-str)
 * [Split\( str s, str sep \) arr.str](string.md#split-str-s-str-sep-arr-str)
 * [Substr\( str s, int off, int length \) str](string.md#substr-str-s-int-off-int-length-str)
 * [Trim\( str s, str cutset \) str](string.md#trim-str-s-str-cutset-str)
@@ -114,7 +115,7 @@ Format(`%s %v %v %g %6.2[4]f`, `ok`, mya, Now(t), 99.0 + 1.)
 
 ### Left\(str s, int i\) str
 
-Функция _Left_ подстроку из первых _i_ символов строки _s_.
+Функция _Left_ возвращает подстроку из первых _i_ символов строки _s_.
 
 ### Lines\(str s\) arr.str
 
@@ -131,6 +132,10 @@ Format(`%s %v %v %g %6.2[4]f`, `ok`, mya, Now(t), 99.0 + 1.)
 ### Replace\(str s, str old, str new\) str
 
 Функция _Replace_ возвращает копию строки _s_ со всеми подстроками _old_ замененными на строку _new_.
+
+### Right\(str s, int i\) str
+
+Функция _Right_ возвращает подстроку из последних _i_ символов строки _s_.
 
 ### Split\(str s, str sep\) arr.str
 

@@ -16,6 +16,7 @@
   * [Буфер](stdlib/buffer.md)
   * [Время](stdlib/time.md)
   * [Консоль](stdlib/console.md)
+  * [Константы](stdlib/constants.md)
   * [Контекст](stdlib/context.md)
   * [Криптография](stdlib/crypto.md)
   * [Логический тип](stdlib/bool.md)
