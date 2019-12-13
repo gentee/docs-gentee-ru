@@ -23,6 +23,7 @@
   * [Массивы](stdlib/array.md)
   * [Многопоточность](stdlib/threads.md)
   * [Множества](stdlib/sets.md)
+  * [Объекты](stdlib/object.md)
   * [Процесс](stdlib/process.md)
   * [Путь](stdlib/path.md)
   * [Рантайм](stdlib/runtime.md)
