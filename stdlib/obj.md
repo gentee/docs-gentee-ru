@@ -3,11 +3,11 @@
 Тип **obj** служит для хранения значений следующих типов - **int, bool, float, str, arr.obj, map.obj**. Если объекту не присвоено никакое значение, то он равен **nil**. Объекту можно присваивать значения  типа, который отличается от текущего.  
 Здесь описаны операторы и функции для работы с объектами.
 
-* [bool\( obj o \) bool](object.md#bool-obj-o-bool)
-* [obj\( bool b \) obj](object.md#obj-bool-b-obj)
-* [obj\( float f \) obj](object.md#obj-float-f-obj)
-* [obj\( int i \) obj](object.md#obj-int-i-obj)
-* [obj\( str s \) obj](object.md#obj-str-s-obj)
+* [bool\( obj o \) bool](obj.md#bool-obj-o-bool)
+* [obj\( bool b \) obj](obj.md#obj-bool-b-obj)
+* [obj\( float f \) obj](obj.md#obj-float-f-obj)
+* [obj\( int i \) obj](obj.md#obj-int-i-obj)
+* [obj\( str s \) obj](obj.md#obj-str-s-obj)
 
 ## Операторы
 
