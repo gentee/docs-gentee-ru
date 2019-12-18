@@ -5,9 +5,11 @@
 
 * [bool\( obj o \) bool](obj.md#bool-obj-o-bool)
 * [IsNil\( obj o \) bool](obj.md#isnil-obj-o-bool)
+* [obj\( arr.typename a \) obj](obj.md#obj-arr-typename-a-obj)
 * [obj\( bool b \) obj](obj.md#obj-bool-b-obj)
 * [obj\( float f \) obj](obj.md#obj-float-f-obj)
 * [obj\( int i \) obj](obj.md#obj-int-i-obj)
+* [obj\( map.typename m \) obj](obj.md#obj-map-typename-m-obj)
 * [obj\( str s \) obj](obj.md#obj-str-s-obj)
 * [str\( obj o \) str](obj.md#str-obj-o-str)
 * [Type\( obj o \) str](obj.md#type-obj-o-str)
@@ -17,7 +19,13 @@
 | Оператор | Результат | Описание |
 | :--- | :--- | :--- |
 | obj **?** | bool | Вызов *bool(obj)*. |
+| obj **=** arr.typename | obj | Присваивание массива объекту. |
+| obj **=** bool | obj | Присваивание логического значения объекту. |
+| obj **=** float | obj | Присваивание десятичного числа объекту. |
+| obj **=** int | obj | Присваивание числа объекту. |
+| obj **=** map.typename | obj | Присваивание ассоциативного массива объекту. |
 | obj **=** obj | obj | Присваивание объектов. |
+| obj **=** str | obj | Присваивание строки объекту. |
 | obj **&=** obj | obj | Создать клон объекта. Новая переменная будет работать с тем же набором данных. |
 
 ## Функции
@@ -30,6 +38,10 @@
 
 Функция _IsNil_ возвращает _true_, если объект не определен (равен **nil**). В противном случае, функция возвращает _false_.
 
+### obj\(arr.typename a\) obj
+
+Функция _obj_ конвертирует массив типа _arr_ в объект.
+
 ### obj\(bool b\) obj
 
 Функция _obj_ создает объект с указанными логическим значением.
@@ -41,6 +53,10 @@
 ### obj\(int i\) obj
 
 Функция _obj_ создает объект с указанными **int** значением.
+
+### obj\(map.typename m\) obj
+
+Функция _obj_ конвертирует ассоциативный массив типа _map_ в объект.
 
 ### obj\(str s\) obj
 
