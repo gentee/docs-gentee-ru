@@ -4,8 +4,11 @@
 Здесь описаны операторы и функции для работы с объектами.
 
 * [bool\( obj o \) bool](obj.md#bool-obj-o-bool)
+* [bool\( obj o, bool def \) bool](obj.md#bool-obj-o-bool-def-bool)
 * [float\( obj o \) float](obj.md#float-obj-o-float)
+* [float\( obj o, float def \) float](obj.md#float-obj-o-float-def-float)
 * [int\( obj o \) int](obj.md#int-obj-o-int)
+* [int\( obj o, int def \) int](obj.md#int-obj-o-int-def-int)
 * [IsNil\( obj o \) bool](obj.md#isnil-obj-o-bool)
 * [obj\( arr.typename a \) obj](obj.md#obj-arr-typename-a-obj)
 * [obj\( bool b \) obj](obj.md#obj-bool-b-obj)
@@ -14,6 +17,7 @@
 * [obj\( map.typename m \) obj](obj.md#obj-map-typename-m-obj)
 * [obj\( str s \) obj](obj.md#obj-str-s-obj)
 * [str\( obj o \) str](obj.md#str-obj-o-str)
+* [str\( obj o, str def \) str](obj.md#str-obj-o-str-def-str)
 * [Type\( obj o \) str](obj.md#type-obj-o-str)
 
 ## Операторы
@@ -39,13 +43,25 @@
 
 Функция _bool_ возвращает логическое значение текущего типа. Например, если объект содержит строку, то возвращается результат вызова _bool(str)_. Если объект не определен, то возвращается ошибка.
 
+### bool\(obj o, bool def\) bool
+
+Функция _bool_ возвращает логическое значение текущего типа. Если объект не определен, то возвращается второй параметр.
+
 ### float\(obj o\) float
 
 Функция _float_ конвертирует объект в действительное число. Объект должен содержать значение типа **str, int, float**, в противном случае, возвращается ошибка.
 
+### float\(obj o, float def\) float
+
+Функция _float_ конвертирует объект в действительное число. Если объект не определен, то возвращается второй параметр.
+
 ### int\(obj o\) int
 
 Функция _int_ конвертирует объект в целое число. Объект должен содержать значение типа **str, int, float, bool**, в противном случае, возвращается ошибка.
+
+### int\(obj o, int def\) int
+
+Функция _int_ конвертирует объект в целое число. Если объект не определен, то возвращается второй параметр.
 
 ### IsNil\(obj o\) bool
 
@@ -78,6 +94,10 @@
 ### str\(obj o\) str
 
 Функция _str_ преобразует объект в строку и возвращает её.
+
+### str\(obj o, str def\) str
+
+Функция _str_ преобразует объект в строку и возвращает её. Если объект не определен, то возвращается второй параметр.
 
 ### Type\(obj o\) str
 
