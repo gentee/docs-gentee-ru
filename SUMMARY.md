@@ -15,6 +15,7 @@
   * [Ассоциативные массивы](stdlib/map.md)
   * [Буфер](stdlib/buffer.md)
   * [Время](stdlib/time.md)
+  * [Конвертация](stdlib/encoding.md)
   * [Консоль](stdlib/console.md)
   * [Константы](stdlib/constants.md)
   * [Контекст](stdlib/context.md)
