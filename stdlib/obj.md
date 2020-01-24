@@ -10,6 +10,8 @@
 * [int\( obj o \) int](obj.md#int-obj-o-int)
 * [int\( obj o, int def \) int](obj.md#int-obj-o-int-def-int)
 * [IsNil\( obj o \) bool](obj.md#isnil-obj-o-bool)
+* [item\( obj o, int i \) obj](obj.md#item-obj-o-int-i-obj)
+* [item\( obj o, str s \) obj](obj.md#item-obj-o-str-s-obj)
 * [obj\( arr.typename a \) obj](obj.md#obj-arr-typename-a-obj)
 * [obj\( bool b \) obj](obj.md#obj-bool-b-obj)
 * [obj\( float f \) obj](obj.md#obj-float-f-obj)
@@ -66,6 +68,14 @@
 ### IsNil\(obj o\) bool
 
 Функция _IsNil_ возвращает _true_, если объект не определен (равен **nil**). В противном случае, функция возвращает _false_.
+
+### item\(obj o, int i\) obj
+
+Функция _item_ возвращает i-й элемент объекта. Объект должен иметь тип **arr.obj**. Если элемент отсутствует, то возвращается пустой объект.
+
+### item\(obj o, str s\) obj
+
+Функция _item_ возвращает значение ключа **s**. Объект должен иметь тип **map.obj**. Если элемент отсутствует, то возвращается пустой объект.
 
 ### obj\(arr.typename a\) obj
 
