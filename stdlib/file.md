@@ -4,9 +4,11 @@
 
 * [AppendFile\( str filename, buf \| str data \)](file.md#appendfile-str-filename-buf-or-str-data)
 * [ChDir\( str dirname \)](file.md#chdir-str-dirname)
+* [ChMode\( str name, int mode \)](file.md#chmode-str-name-int-mode)
 * [CopyFile\( str src, str dest \) int](file.md#copyfile-str-src-str-dest-int)
 * [CreateDir\( str dirname \)](file.md#createdir-str-dirname)
 * [FileInfo\( str name \) finfo](file.md#fileinfo-str-name-finfo)
+* [FileMode\( str name \) int](file.md#filemode-str-name-int)
 * [GetCurDir\(\) str](file.md#getcurdir-str)
 * [Md5File\( str filename \) str](file.md#md-5-file-str-filename-str)
 * [ReadDir\( str dirname \) arr.finfo](file.md#readdir-str-dirname-arr-finfo)
@@ -44,9 +46,13 @@
 
 Функция _ChDir_ изменяет текущую директорию.
 
+### ChMode\(str name, int mode\)
+
+Функция _ChMode_ изменяет атрибуты файла.
+
 ### CopyFile\(str src, str dest\) int
 
-Функция _CopyFile_ копирует файл _src_ в файл _dest_. Если файл _dest_ существует, то он будет перезаписан. Функция возвращает количество скопированных байт.
+Функция _CopyFile_ копирует файл _src_ в файл _dest_. Если файл _dest_ существует, то он будет перезаписан. При копировании сохраняются атрибуты файла. Функция возвращает количество скопированных байт.
 
 ### CreateDir\(str dirname\)
 
@@ -55,6 +61,10 @@
 ### FileInfo\(str name\) finfo
 
 Функция _FileInfo_ получает информацию об указанном файле и возвращает структуру _finfo_.
+
+### FileMode\(str name\) int
+
+Функция _FileMode_ возвращает атрибуты файла.
 
 ### GetCurDir\(\) str
 
