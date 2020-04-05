@@ -6,7 +6,7 @@
 * [ErrID\( error err \) int](runtime.md#errid-error-err-int)
 * [ErrText\( error err \) str](runtime.md#errtext-error-err-str)
 * [ErrTrace\( error err \) arr.trace](runtime.md#errtrace-error-err-arr-trace)
-* [exit\( int code \)](runtime.md#exit-ind-code)
+* [exit\( int code \)](runtime.md#exit-int-code)
 * [Trace\(\) arr.trace](runtime.md#trace-arr-trace)
 
 ## Типы
@@ -33,7 +33,7 @@
 
   как в функции [Format](https://gentee.github.io/docs-gentee-ru/stdlib/string#formatstr-s-anytype-args-str).
 
-```text
+```go
     error(10, `Error message %{ 10 }`)
     error(10, `Error message %d`, 10)
 ```
@@ -42,7 +42,7 @@
 
 Функция _ErrID_ возвращает идентификатор ошибки _err_. Эта функция может использоваться внутри конструкции **try-catch** для обработки ошибок.
 
-```text
+```go
 run {
   try {
     .....
@@ -70,7 +70,7 @@ run {
 
 Функция _exit_ прекращает работу скрипта. Функция может быть вызвана в любом потоке. Скрипт возвращает значение _code_.
 
-```text
+```go
 func ok(int par) int {
   if par == 0 : exit(0)
   return 3 * par
