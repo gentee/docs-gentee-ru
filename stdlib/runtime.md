@@ -6,6 +6,7 @@
 * [ErrID\( error err \) int](runtime.md#errid-error-err-int)
 * [ErrText\( error err \) str](runtime.md#errtext-error-err-str)
 * [ErrTrace\( error err \) arr.trace](runtime.md#errtrace-error-err-arr-trace)
+* [exit\( int code \)](runtime.md#exit-ind-code)
 * [Trace\(\) arr.trace](runtime.md#trace-arr-trace)
 
 ## Типы
@@ -64,6 +65,24 @@ run {
 ### ErrTrace\(error err\) arr.trace
 
 Функция _ErrTrace_ возвращает стек вызовов функций на момент возникновения ошибки _err_. Эта функция может использоваться внутри конструкции **try-catch** для обработки ошибок.
+
+### exit\(int code\)
+
+Функция _exit_ прекращает работу скрипта. Функция может быть вызвана в любом потоке. Скрипт возвращает значение _code_.
+
+```text
+func ok(int par) int {
+  if par == 0 : exit(0)
+  return 3 * par
+}
+run int {
+  int sum
+  for i in 10..-10 {
+    sum += ok(i)
+  }
+  return sum
+}
+```
 
 ### Trace\(\) arr.trace
 
