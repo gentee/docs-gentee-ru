@@ -36,6 +36,19 @@
 * **Input** \[\]byte - предопределенный стандартный ввод (stdin). Может использоваться, например, в функции [ReadString](/stdlib/console.md#readstring-str-text-str).
 * **Cycle** uint64 - максимальное количество итераций в цикле. По умолчанию, равно 16000000.
 * **Depth** uint32 - максимальная вложенность исполняемых блоков. Ограничивает глубину рекурсии. По умолчанию, равно 1000.
+* **SysChan** chan int - канал для отправки команд *SysSuspend* (0), *SysResume* (1), *SysTerminate* (2). Позволяет управлять выполнением скрипта извне.
+
+* **SysSuspend** - приостановить работу скрипта и всех потоков.
+* **SysResume** - возобновить работу скрипта и всех потоков.
+* **SysTerminate** - завершить работу скрипта и всех потоков.
+
+``` go
+    settings.SysChan = make(chan int)
+    go func() {
+        _, err = exec.Run(settings)
+    }()
+    settings.SysChan <- gentee.SysTerminate
+```
 
 ## Функции и методы
 
