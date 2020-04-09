@@ -2,6 +2,7 @@
 
 Здесь описаны функции для работы с консолью.
 
+* [ClearCarriage\( str input \) str](console.md#clearcarriage-str-input-str)
 * [Print\( anytype par... \) int](console.md#print-anytype-par-int)
 * [Println\( anytype par... \) int](console.md#println-anytype-par-int)
 * [ReadString\( str text \) str](console.md#readstring-str-text-str)
@@ -28,6 +29,18 @@ Three
 
 ## Функции
 
+### ClearCarriage\(str input\) str
+
+Функция _ClearCarriage_ очищает строку от всех сиволов возврата каретки **\r** назад до предыдущего символа перевода строки **\n**. Рекомендуется использовать _ClearCarriage_, если вы получаете вывод консоли при вызове функции **Run**. Функция вызывается автоматически при вызове _str s = $ command line_.
+
+``` go
+buf dirout
+Run("myapp", stdout: dirout)
+// dirout == Start\nPercent: 0%\rPercent: 50%\rPercent: 100%\nFinish
+ret = ClearCarriage(str(dirout))
+// ret == Start\nPercent: 100%\nFinish
+```
+
 ### Print\(anytype par...\) int
 
 Функция _Print_ форматирует по умолчанию все переданные операнды любых типов и выводит их в стандартный вывод. Пробелы являются разделителями при выводе параметров, если ни один из соседних параметров не является строкой. Функция _Print_ возвращает количество записанных байтов.
@@ -39,4 +52,3 @@ Three
 ### ReadString\(str text\) str
 
 Функция _ReadString_ читает данные из стандартного ввода до получения символа '\n' \(нажатие Enter\). Она возвращает строку содержащую введенные данные. Если параметр _text_ не пустой, то функция выведет этот текст перед чтением данных.
-

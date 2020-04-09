@@ -7,6 +7,7 @@
 * [float\( int i \) float](integer.md#float-int-i-float)
 * [Max\( int l, int r \) int](integer.md#max-int-l-int-r-int)
 * [Min\( int l, int r \) int](integer.md#min-int-l-int-r-int)
+* [Random\( int n \) int](integer.md#random-int-n-int)
 * [str\( int i \) str](integer.md#str-int-i-str)
 
 ## Операторы
@@ -67,7 +68,10 @@
 
 Функция _Min_ возвращает минимальное из двух значений.
 
+### Random\(int n\) int
+
+Функция _Random_ возвращает случайное неотрицательное число меньше *n* в интервале [0,n).
+
 ### str\(int i\) str
 
 Функция _str_ преобразует целое число в строку.
-
