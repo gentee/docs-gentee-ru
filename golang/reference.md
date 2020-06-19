@@ -114,7 +114,7 @@ func cnv1(in *core.Map) (*core.Map, error) {
 }
 ```
 
-### Go2GenteeType\(val interface{}\) \(interface{}, error\)
+### Go2GenteeType\(val interface{}, vtype... string\) \(interface{}, error\)
 
 Функция _Go2GenteeType_ конвертирует стандартный тип Go в тип Gentee. Во втором параметре можно указать тип Gentee переменной. Например, _set_, если вы хотите сконвертировать _[]byte_ в *core.Set. Вы можете использовать эту функцию, в ваших встраиваемых функциях.
 
