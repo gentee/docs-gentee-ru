@@ -11,6 +11,8 @@
 * [\(g \*Gentee\) CompileAndRun\(filename string\) \(interface{}, error\)](reference.md#g-gentee-compileandrun-filename-string-interface-error)
 * [\(g \*Gentee\) CompileAndRun\(filename string\) \(\*Exec, int, error\)](reference.md#g-gentee-compilefile-filename-string-exec-int-error)
 * [\(exec \*Exec\) Run\(settings Settings\) \(interface{}, error\)](reference.md#exec-exec-run-settings-settings-interface-error)
+* [Gentee2GoType\(val interface{}, vtype... string\) interface{}](reference.md#gentee2gotype-val-interface-vtype-string-interface)
+* [Go2GenteeType\(val interface{}, vtype... string\) \(interface{}, error\)](reference.md#go2genteetype-val-interface-vtype-string-interface-error)
 * [Version\(\) string](reference.md#version-string)
 
 ## Типы
@@ -76,6 +78,43 @@
 ### \(exec \*Exec\) Run\(settings Settings\) \(interface{}, error\)
 
 Функция _Run_ выполняет байт-код из структуры _exec_. В параметре _settings_ можно указать дополнительные настройки. Функция возвращает результат выполнения скрипта и значение ошибки.
+
+### Gentee2GoType\(val interface{}, vtype... string\) interface{}
+
+Функция _Gentee2GoType_ конвертирует переменную в стандартные типы Go. Во втором параметре можно указать тип Gentee переменной. Например, _arr.bool_. В этом случае, вы получите массив переменных типа _bool_, а не _int64_. Вы можете использовать эту функцию, в ваших встраиваемых функциях. 
+
+Таблица соответствия типов
+
+| Gentee тип | Получаемый тип | Возвращаемый тип (vtype)
+| :--- | :--- | :--- |
+| int | int64 | int64
+| bool | int64 | bool ("bool")
+| char | int64 | rune ("rune")
+| float | float64 | float64
+| str | string | string
+| arr | *core.Array | []interface{}
+| buf | *core.Buffer | []byte
+| map | *core.Map | map[string]interface{}
+| set | *core.Set | []byte
+| struct type | *core.Struct | map[string]interface{}
+| obj | *core.Obj | interface{}
+
+```go
+func cnv1(in *core.Map) (*core.Map, error) {
+  my := gentee.Gentee2GoType(in).(map[string]interface{})
+  for key, a := range my {
+    for i, v := range a.([]interface{}) {
+      a.([]interface{})[i] = v.(int64) + 1
+    }
+    delete(my, key)
+    my[key+`2`] = a
+  }
+  ret, err := gentee.Go2GenteeType(my)
+  return ret.(*core.Map), err
+}
+```
+
+### Go2GenteeType\(val interface{}\) \(interface{}, error\)
 
 ### Version\(\) string
 

@@ -23,6 +23,7 @@
 | map | *core.Map |
 | set | *core.Set |
 | struct type | *core.Struct |
+| obj | *core.Obj |
 
 ```go
 func sum(x, y int64) int64 {
