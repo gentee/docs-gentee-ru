@@ -11,8 +11,8 @@
 * [\(g \*Gentee\) CompileAndRun\(filename string\) \(interface{}, error\)](reference.md#g-gentee-compileandrun-filename-string-interface-error)
 * [\(g \*Gentee\) CompileAndRun\(filename string\) \(\*Exec, int, error\)](reference.md#g-gentee-compilefile-filename-string-exec-int-error)
 * [\(exec \*Exec\) Run\(settings Settings\) \(interface{}, error\)](reference.md#exec-exec-run-settings-settings-interface-error)
-* [Gentee2GoType\(val interface{}, vtype... string\) interface{}](reference.md#gentee2gotype-val-interface-vtype-string-interface)
-* [Go2GenteeType\(val interface{}, vtype... string\) \(interface{}, error\)](reference.md#go2genteetype-val-interface-vtype-string-interface-error)
+* [Gentee2GoType\(val interface{}, vtype... string\) interface{}](reference.md#gentee-2-gotype-val-interface-vtype-string-interface)
+* [Go2GenteeType\(val interface{}, vtype... string\) \(interface{}, error\)](reference.md#go-2-genteetype-val-interface-vtype-string-interface-error)
 * [Version\(\) string](reference.md#version-string)
 
 ## Типы
@@ -81,7 +81,7 @@
 
 ### Gentee2GoType\(val interface{}, vtype... string\) interface{}
 
-Функция _Gentee2GoType_ конвертирует переменную в стандартные типы Go. Во втором параметре можно указать тип Gentee переменной. Например, _arr.bool_. В этом случае, вы получите массив переменных типа _bool_, а не _int64_. Вы можете использовать эту функцию, в ваших встраиваемых функциях. 
+Функция _Gentee2GoType_ конвертирует переменную в стандартные типы Go. Во втором параметре можно указать тип Gentee переменной. Например, _arr.bool_. В этом случае, вы получите массив переменных типа _bool_, а не _int64_. Вы можете использовать эту функцию, в ваших встраиваемых функциях.
 
 Таблица соответствия типов
 
@@ -115,6 +115,41 @@ func cnv1(in *core.Map) (*core.Map, error) {
 ```
 
 ### Go2GenteeType\(val interface{}\) \(interface{}, error\)
+
+Функция _Go2GenteeType_ конвертирует стандартный тип Go в тип Gentee. Во втором параметре можно указать тип Gentee переменной. Например, _set_, если вы хотите сконвертировать _[]byte_ в *core.Set. Вы можете использовать эту функцию, в ваших встраиваемых функциях.
+
+Таблица соответствия типов
+
+| Gentee тип | Получаемый Go тип | Возвращаемый тип (vtype)
+| :--- | :--- | :--- |
+| int | all int & uint | int64
+| bool | bool | int64
+| char | rune | int64
+| float | float64 | float64
+| str | string | string
+| arr | []interface{} | *core.Array
+| buf | []byte | *core.Buffer
+| set | []byte | *core.Set ("set")
+| map | map[string]interface{} | *core.Map
+| obj | interface{} | *core.Obj ("obj")
+
+```go
+func cnv5(in *core.Set) (*core.Set, error) {
+  my := gentee.Gentee2GoType(in).([]byte)
+  for i, b := range my {
+    if i > 10 {
+      break
+    }
+    if b == 0 {
+      my[i] = 1
+    } else {
+      my[i] = b - 1
+    }
+  }
+  ret, err := gentee.Go2GenteeType(my, `set`)
+  return ret.(*core.Set), err
+}
+```
 
 ### Version\(\) string
 
