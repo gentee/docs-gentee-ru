@@ -2,7 +2,7 @@
 
 Здесь описаны операторы и функции для работы с процессами и приложениями. Функции _Args_ и _ArgCount_ работают с командной строкой любого формата. Для корректной работы остальных _Arg.._ функций необходимо, чтобы командная строка имела следующий формат.
 
-```text
+```go
 CmdLine = [ CmdOptions ] ["-"] [ CmdParameters ]
 CmdParameters = { CmdParameter }
 CmdParameter = ParamWithoutSpace | "Param With Spaces" | 'Param With Spaces'
@@ -29,6 +29,7 @@ CmdOptionValues = " " CmdParameters
 * [Open\( str path \)](process.md#open-str-path)
 * [OpenWith\( str app, str path \)](process.md#openwith-str-app-str-path)
 * [Run\( str cmd, str params... \)](process.md#run-str-cmd-str-params)
+* [SplitCmdLine\( str cmdline \) arr.str](process.md#splitcmdline-str-cmdline-arrstr)
 * [Start\( str cmd, str params... \)](process.md#start-str-cmd-str-params)
 
 ## Операторы
@@ -112,6 +113,18 @@ list = ArgsTail() // list == [val0, -value1, value 2]
         #comment    
         echo "%{str(dirout)}"`
     ))
+```
+
+### SplitCmdLine\(str cmdline\) arr.str
+
+Функция _SplitCmdLine_ разбирает входящую строку с параметрами командной строки и возвращает массив параметров.
+
+```go
+run str {
+    return SplitCmdLine(`param1 "second par" "qwert\"y" 100 'oo ps'
+-lastparam`).Join(`=`)
+}
+// returns param1=second par=qwert"y=100=oo ps=-lastparam
 ```
 
 ### Start\(str cmd, str params...\)
