@@ -29,7 +29,7 @@ CmdOptionValues = " " CmdParameters
 * [Open\( str path \)](process.md#open-str-path)
 * [OpenWith\( str app, str path \)](process.md#openwith-str-app-str-path)
 * [Run\( str cmd, str params... \)](process.md#run-str-cmd-str-params)
-* [SplitCmdLine\( str cmdline \) arr.str](process.md#splitcmdline-str-cmdline-arrstr)
+* [SplitCmdLine\( str cmdline \) arr.str](process.md#splitcmdline-str-cmdline-arr-str)
 * [Start\( str cmd, str params... \)](process.md#start-str-cmd-str-params)
 
 ## Операторы
