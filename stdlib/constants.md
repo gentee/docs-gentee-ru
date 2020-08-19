@@ -38,3 +38,6 @@ run my_best_script {
 }
 ```
 
+### VERSION
+
+Константа _VERSION_ возвращает текущую версию компилятора Gentee.

@@ -12,6 +12,7 @@
 * [GetCurDir\(\) str](file.md#getcurdir-str)
 * [Md5File\( str filename \) str](file.md#md-5-file-str-filename-str)
 * [ReadDir\( str dirname \) arr.finfo](file.md#readdir-str-dirname-arr-finfo)
+* [ReadDir\( str dirname, int flags, str pattern \) arr.finfo](file.md#readdir-str-dirname-int-flags-str-pattern-arr-finfo)
 * [ReadFile\( str filename \) str](file.md#readfile-str-filename-str)
 * [ReadFile\( str filename, buf out \) buf](file.md#readfile-str-filename-buf-out-buf)
 * [ReadFile\( str filename, int offset, int length \) buf](file.md#readfile-str-filename-int-offset-int-length-buf)
@@ -35,6 +36,7 @@
 * **int Mode** - флаги файла и разрешения
 * **time Time** - время последнего изменения
 * **bool IsDir** - true, если это директория
+* **str Dir** - директория, где расположен файл. Данное поле заполняется только при вызове функции [ReadDir(str, int, str)](file.md#readdir-str-dirname-int-flags-str-pattern-arr-finfo).
 
 ## Функции
 
@@ -77,6 +79,28 @@
 ### ReadDir\(str dirname\) arr.finfo
 
 Функция _ReadDir_ читает директорию с указанным именем и возвращает список её поддиректорий и файлов.
+
+### ReadDir\(str dirname, int flags, str pattern\) arr.finfo
+
+Функция _ReadDir_ читает директорию *dirname* с указанным именем и возвращает список её поддиректорий и файлов в соотвествии с указанными параметрами. Параметр *flags* может быть комбинацией следующих флагов:
+
+* **RECURSIVE** - В этом случае будет рекурсивный поиск по всем поддиректориям.
+* **ONLYFILES** - Возвращаемый массив будет содержать только файлы.
+* **REGEXP** - Параметр *pattern* содержит регулярное выражения для сравнения имёен файлов.
+
+Параметр *pattern* может содержать маску для файлов или регулярное выражение. В этом случае, будут возвращаться файлы и директории, которые соответствуют указанному шаблону. Маска может содержать следующие символы:
+
+* '\*' - любая последовательность, кроме символа разделителя
+* '?' - любой одиночный символ, кроме символа разделителя
+
+``` go
+for item in ReadDir(ftemp, RECURSIVE, `*fold*`) {
+    ret += item.Name
+}
+for item in ReadDir(ftemp, RECURSIVE | ONLYFILES | REGEXP, `.*\.pdf`) {
+    ret += item.Name
+}
+```
 
 ### ReadFile\(str filename\) str
 
