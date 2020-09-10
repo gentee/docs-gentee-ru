@@ -7,6 +7,8 @@
 * [ChMode\( str name, int mode \)](file.md#chmode-str-name-int-mode)
 * [CopyFile\( str src, str dest \) int](file.md#copyfile-str-src-str-dest-int)
 * [CreateDir\( str dirname \)](file.md#createdir-str-dirname)
+* [CreateFile\( str name, bool trunc \)](file.md#createfile-str-name-bool-trunc)
+* [ExistFile\( str name \) bool](file.md#existfile-str-name-bool)
 * [FileInfo\( str name \) finfo](file.md#fileinfo-str-name-finfo)
 * [FileMode\( str name \) int](file.md#filemode-str-name-int)
 * [GetCurDir\(\) str](file.md#getcurdir-str)
@@ -59,6 +61,14 @@
 ### CreateDir\(str dirname\)
 
 Функция _CreateDir_ создает директорию с именем _dirname_, включая все необходимые родительские директории. Если _dirname_ уже существующая директория, то _CreateDir_ ничего не делает.
+
+### CreateFile\(str name, bool trunc\)
+
+Функция _CreateFile_ создает файл с указанным именем. Если параметр _trunc_ равен _true_ и файл уже существует, то в этом случае его размер станет 0.
+
+### ExistFile\(str name\) bool
+
+Функция _ExistFile_ возвращает *true*, если указанный файл или директория существует. В противном случае, возвращается *false*.
 
 ### FileInfo\(str name\) finfo
 
