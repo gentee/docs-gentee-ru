@@ -39,6 +39,7 @@
   * [Документация](golang/reference.md)
   * [Компиляция и выполнение](golang/howtouse.md)
   * [Дополнительные возможности](golang/customize.md)
+  * [Песочница](golang/playground.md)
 
 ## Сменить язык
 
