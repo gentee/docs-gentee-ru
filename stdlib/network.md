@@ -3,9 +3,20 @@
 Здесь описаны функции для работы с сетью/интернетом.
 
 * [Download\( str url, str filename \) int](network.md#download-str-url-str-filename-int)
+* [HeadInfo\( str url \) hinfo](network.md#headinfo-str-url-hinfo)
 * [HTTPGet\( str url \) buf](network.md#httpget-str-url-buf)
 * [HTTPPage\( str url \) str](network.md#httppage-str-url-str)
 * [HTTPRequest\( str url, str method, map.str params, map.str headers \) str](network.md#httprequest-str-url-str-method-map-str-params-map-str-headers-str)
+
+## Типы
+
+### hinfo
+
+Тип _hinfo_ используется для получения заголовка url адреса и имеет следующие поля:
+
+* **int Status** - статус ответа.
+* **int Length** - размер содержимого. Может быть не указан (равен 0).
+* **str Type** - тип содержимого. Например, *text/html; charset=UTF-8*.
 
 ## Функции для работы с HTTP
 
@@ -17,6 +28,10 @@
     str ftemp = TempDir() + `/readme.html`
     int size = Download("https://github.com/gentee/gentee", ftemp)
 ```
+
+### HeadInfo\(str url\) hinfo
+
+Функция _HeadInfo_ отправляет запрос **HEAD** по указанному параметру _url_ и возвращает структуру _hinfo_.
 
 ### HTTPGet\( str url \) buf
 
