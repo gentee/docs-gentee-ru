@@ -51,6 +51,9 @@
   * *AllSizeLimit* int64 - суммарный размер файлов. По умолчанию, 10 MB.
   * *FilesLimit* int - максимальное количество файлов. По умолчанию, 100.
   * *SizeLimit* int64 - максимальный размер файла. По умолчанию, 5 MB.
+* **ProgressFunc** gentee.ProgressFunc - функция для отображения процесса копирования, скачивания и т.д., например, в виде прогресс-бара. Функция должна иметь следующий тип:  
+_func MyProgress(progress *gentee.Progress) bool_  
+и возвращать *true*. Тип *Progress* описан ниже.
 
 ``` go
     settings.SysChan = make(chan int)
@@ -59,6 +62,27 @@
     }()
     settings.SysChan <- gentee.SysTerminate
 ```
+
+### Progress
+
+Тип _Progress_ служит для отображения процесса копирования, скачивания. Переменная этого типа передается в функцию _ProgressFunc_ и имеет следующие поля:
+
+* **ID uint32** - уникальный идентификатор.
+* **Type int32** - тип процесса.
+  * *ProgressCopy (0)* - копирование.
+  * *ProgressDownload (1)* - скачивание.
+  * *ProgressCompress (2)* - сжатие.
+  * *ProgressDecompress (3)* - распаковка.
+* **Status int32** - статус.
+  * *ProgressStart (0)* - начало процесса.
+  * *ProgressActive (1)* - процесс идёт.  
+  * *ProgressEnd (2)* - процесс закончен.  
+* **Total int64** - общий размер.
+* **Current int64** - текущий размер.
+* **Source string** - источник процесса.
+* **Dest string** - целевой объект процесса.
+* **Ratio float64** - отношение *Current/Total*. Для получения процентов необходимо умножить на 100.
+* **Custom interface{}** - служит для хранения любой дополнительной информации.
 
 ## Функции и методы
 
