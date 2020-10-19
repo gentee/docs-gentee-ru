@@ -3,7 +3,7 @@
 Здесь описаны общие системные функции.
 
 * [GetEnv\( str name \) str](system.md#getenv-str-name-str)
-* [SetEnv\( str name, bool|int|str val \)](system.md#setenv-str-name-bool-val)
+* [SetEnv\( str name, bool|int|str val \)](system.md#setenv-bool-or-int-or-str-name)
 * [UnsetEnv\( str name \)](system.md#unsetenv-str-name)
 
 ## Функции
