@@ -15,6 +15,7 @@
 * [Repeat\( str s, int count \) str](string.md#repeat-str-s-int-count-str)
 * [Replace\( str s, str old, str new \) str](string.md#replace-str-s-str-old-str-new-str)
 * [Right\( str s, int i \) string](string.md#right-str-s-int-i-str)
+* [Size\( int size, str format \) string](string.md#size-int-size-str-format-str)
 * [Split\( str s, str sep \) arr.str](string.md#split-str-s-str-sep-arr-str)
 * [Substr\( str s, int off, int length \) str](string.md#substr-str-s-int-off-int-length-str)
 * [Trim\( str s, str cutset \) str](string.md#trim-str-s-str-cutset-str)
@@ -136,6 +137,15 @@ Format(`%s %v %v %g %6.2[4]f`, `ok`, mya, Now(t), 99.0 + 1.)
 ### Right\(str s, int i\) str
 
 Функция _Right_ возвращает подстроку из последних _i_ символов строки _s_.
+
+### Size\(int size, str format\) str
+
+Функция _Size_ возвращает округленный размер в виде строки. В параметре _format_ укажите шаблон вывода для десятичного числа с плавающей точкой и строки. Если _format_ равен пустой строке, то используется формат *%.2f%s*.
+
+``` go
+Print( Size(956348901, `%.1f %s `) + Size(62, `%[2]s%.2[1]f `) + Size(123789, ``))
+// 912.0 MB B62 120.89KB
+```
 
 ### Split\(str s, str sep\) arr.str
 
