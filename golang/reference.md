@@ -5,6 +5,7 @@
 * [type Custom](reference.md#type-custom)
 * [type EmbedItem](reference.md#type-embed-item)
 * [type Settings](reference.md#type-settings)
+* [type Progress](reference.md#type-progress)
 * [Customize\(custom \*Custom\) error](reference.md#customize-custom-custom-error)
 * [New\(\) \*Gentee](reference.md#new-gentee)
 * [\(g \*Gentee\) Compile\(input, path string\) \(\*Exec, int, error\)](reference.md#g-gentee-compile-input-path-string-exec-int-error)
@@ -63,7 +64,7 @@ _func MyProgress(progress *gentee.Progress) bool_
     settings.SysChan <- gentee.SysTerminate
 ```
 
-### Progress
+### type Progress
 
 Тип _Progress_ служит для отображения процесса копирования, скачивания. Переменная этого типа передается в функцию _ProgressFunc_ и имеет следующие поля:
 
