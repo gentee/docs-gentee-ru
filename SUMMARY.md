@@ -31,6 +31,7 @@
   * [Регулярные выражения](stdlib/regexp.md)
   * [Сеть](stdlib/network.md)
   * [Символьный тип](stdlib/char.md)
+  * [Система](stdlib/system.md)
   * [Строки](stdlib/string.md)
   * [Файлы](stdlib/file.md)
   * [Целые числа](stdlib/integer.md)
