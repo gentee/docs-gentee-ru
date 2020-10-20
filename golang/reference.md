@@ -54,7 +54,7 @@
   * *SizeLimit* int64 - максимальный размер файла. По умолчанию, 5 MB.
 * **ProgressFunc** gentee.ProgressFunc - функция для отображения процесса копирования, скачивания и т.д., например, в виде прогресс-бара. Функция должна иметь следующий тип:  
 _func MyProgress(progress *gentee.Progress) bool_  
-и возвращать *true*. Тип *Progress* описан ниже. Эта функция вызывается при копировании, скачивании файлов, а также при вызове функций [Progress](/stdlib/runtime#progress-int-id-inc).
+и возвращать *true*. Тип *Progress* описан ниже. Функция _ProgressFunc_ вызывается при копировании, скачивании файлов, а также при вызове функций [Progress](/stdlib/runtime.md#progress-int-id-inc).
 
 ``` go
     settings.SysChan = make(chan int)
