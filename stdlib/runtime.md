@@ -7,6 +7,9 @@
 * [ErrText\( error err \) str](runtime.md#errtext-error-err-str)
 * [ErrTrace\( error err \) arr.trace](runtime.md#errtrace-error-err-arr-trace)
 * [exit\( int code \)](runtime.md#exit-int-code)
+* [Progress\( int id inc \)](runtime.md#progress-int-id-inc)
+* [ProgressEnd\( int id \)](runtime.md#progressend-int-id)
+* [ProgressStart\( int total ptype, str src dest \) int](runtime.md#progressstart-int-total-ptype-str-src-dest-int)
 * [Trace\(\) arr.trace](runtime.md#trace-arr-trace)
 
 ## Типы
@@ -83,6 +86,18 @@ run int {
   return sum
 }
 ```
+
+### Progress\( int id inc \)
+
+Функция _Progress_ увеличивает величину счётчика процесса на значение параметра _inc_. _id_ - идентификатор прогресс-бара возвращённый функцией _ProgressStart_. Функция _Progress_ вызывает Go функцию _ProgressHandle_, которая должна быть определена в настройках при запуске скрипта.
+
+### ProgressEnd\( int id \)
+
+Функция _ProgressEnd_ удаляет счётчик процесса с идентификатором _id_.
+
+### ProgressStart\( int total ptype, str src dest \) int
+
+Функция _ProgressStart_ создаёт счётчик процесса и возвращает его идентификатор. _total_ - максимальная величина счётчика. _ptype_ - тип счётчика, может быть любое число. _src_ - имя источника. _dest_ - имя целевого объекта. Функции для работы с прогрессом-баром ничего не отображают, они вызывают функцию _ProgressHandle_, которая должна быть определена в настройках при запуске скрипта. В функции _ProgressHandle_ вы можете отображать состояние процесса удобным для вас способом. После окончания работы с данным счётчиком необходимо вызвать функцию _ProgressEnd_ для его удаления.
 
 ### Trace\(\) arr.trace
 

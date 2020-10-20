@@ -75,9 +75,9 @@ _func MyProgress(progress *gentee.Progress) bool_
   * *ProgressCompress (2)* - сжатие.
   * *ProgressDecompress (3)* - распаковка.
 * **Status int32** - статус.
-  * *ProgressStart (0)* - начало процесса.
-  * *ProgressActive (1)* - процесс идёт.  
-  * *ProgressEnd (2)* - процесс закончен.  
+  * *ProgStatusStart (0)* - начало процесса.
+  * *ProgStatusActive (1)* - процесс идёт.  
+  * *ProgStatusEnd (2)* - процесс закончен.  
 * **Total int64** - общий размер.
 * **Current int64** - текущий размер.
 * **Source string** - источник процесса.
