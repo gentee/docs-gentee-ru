@@ -91,6 +91,15 @@ run int {
 
 Функция _Progress_ увеличивает величину счётчика процесса на значение параметра _inc_. _id_ - идентификатор прогресс-бара возвращённый функцией _ProgressStart_. Функция _Progress_ вызывает Go функцию _ProgressFunc_, которая должна быть определена в настройках при запуске скрипта.
 
+``` go
+  int total = 200
+  int prog = ProgressStart(total, 100, `counter`, ``)
+  for i in 1..5 {
+    Progress(prog, 40)
+  }
+  ProgressEnd(prog)
+```
+
 ### ProgressEnd\( int id \)
 
 Функция _ProgressEnd_ удаляет счётчик процесса с идентификатором _id_.
