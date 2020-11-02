@@ -19,7 +19,7 @@
 * [obj\( int i \) obj](obj.md#obj-int-i-obj)
 * [obj\( map.typename m \) obj](obj.md#obj-map-typename-m-obj)
 * [obj\( str s \) obj](obj.md#obj-str-s-obj)
-* [Sort\( arr.obj o, cmpobjfunc cmpfunc \) arr.obj](obj.md#sort-arr-obj-o-cmpobjfunc cmpfunc-arr-obj)
+* [Sort\( arr.obj o, cmpobjfunc cmpfunc \) arr.obj](obj.md#sort-arr-obj-o-cmpobjfunc-cmpfunc-arr-obj)
 * [str\( obj o \) str](obj.md#str-obj-o-str)
 * [str\( obj o, str def \) str](obj.md#str-obj-o-str-def-str)
 * [Type\( obj o \) str](obj.md#type-obj-o-str)
