@@ -10,6 +10,8 @@
 * [float\( obj o, float def \) float](obj.md#float-obj-o-float-def-float)
 * [int\( obj o \) int](obj.md#int-obj-o-int)
 * [int\( obj o, int def \) int](obj.md#int-obj-o-int-def-int)
+* [IsArray\( obj o \) bool](obj.md#isarray-obj-o-bool)
+* [IsMap\( obj o \) bool](obj.md#ismap-obj-o-bool)
 * [IsNil\( obj o \) bool](obj.md#isnil-obj-o-bool)
 * [item\( obj o, int i \) obj](obj.md#item-obj-o-int-i-obj)
 * [item\( obj o, str s \) obj](obj.md#item-obj-o-str-s-obj)
@@ -77,6 +79,14 @@
 ### int\(obj o, int def\) int
 
 Функция _int_ конвертирует объект в целое число. Если объект не определен, то возвращается второй параметр.
+
+### IsArray\(obj o\) bool
+
+Функция _IsArray_ возвращает _true_, если объект является массивом. В противном случае, функция возвращает _false_.
+
+### IsMap\(obj o\) bool
+
+Функция _IsMap_ возвращает _true_, если объект является ассоциативным массивом (map). В противном случае, функция возвращает _false_.
 
 ### IsNil\(obj o\) bool
 
