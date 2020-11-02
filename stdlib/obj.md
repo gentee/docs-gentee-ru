@@ -4,6 +4,7 @@
 Здесь описаны операторы и функции для работы с объектами.
 
 * [arr\( obj o \) arr.obj](obj.md#arr-obj-o-arr-obj)
+* [arrstr\( obj o \) arr.str](obj.md#arrstr-obj-o-arr-str)
 * [bool\( obj o \) bool](obj.md#bool-obj-o-bool)
 * [bool\( obj o, bool def \) bool](obj.md#bool-obj-o-bool-def-bool)
 * [float\( obj o \) float](obj.md#float-obj-o-float)
@@ -55,6 +56,10 @@
 ### arr\(obj o\) arr.obj
 
 Функция _arr_ возвращает массив объектов. Объект _o_ должен быть массивом, в противном случае возвращается ошибка. При вызове функции не создается нового массива, а возвращается текущий массив, который содержит объект _o_.
+
+### arrstr\(obj o\) arr.str
+
+Функция _arrstr_ конвертирует массив объектов в массив строк. Объект _o_ должен быть массивом, в противном случае возвращается ошибка. Функция возвращает полученный массив строк.
 
 ### bool\(obj o\) bool
 

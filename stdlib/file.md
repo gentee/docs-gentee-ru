@@ -13,6 +13,7 @@
 * [FileMode\( str name \) int](file.md#filemode-str-name-int)
 * [GetCurDir\(\) str](file.md#getcurdir-str)
 * [Md5File\( str filename \) str](file.md#md-5-file-str-filename-str)
+* [obj\( finfo fi \) obj](file.md#obj-finfo-fi-obj)
 * [ReadDir\( str dirname \) arr.finfo](file.md#readdir-str-dirname-arr-finfo)
 * [ReadDir\( str dirname, int flags, str pattern \) arr.finfo](file.md#readdir-str-dirname-int-flags-str-pattern-arr-finfo)
 * [ReadFile\( str filename \) str](file.md#readfile-str-filename-str)
@@ -85,6 +86,10 @@
 ### Md5File\(str filename\) str
 
 Функция _Md5File_ возвращает MD5 хэш указанного файла в виде шестнадцатеричной строки.
+
+### obj\(finfo fi\) obj
+
+Функция _obj_ конвертирует переменную типа finfo в объект. Полученный объект имеет поля: *name, size, mode, time, isdir, dir*.
 
 ### ReadDir\(str dirname\) arr.finfo
 
