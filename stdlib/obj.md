@@ -13,6 +13,7 @@
 * [IsNil\( obj o \) bool](obj.md#isnil-obj-o-bool)
 * [item\( obj o, int i \) obj](obj.md#item-obj-o-int-i-obj)
 * [item\( obj o, str s \) obj](obj.md#item-obj-o-str-s-obj)
+* [map\( obj o \) map.obj](obj.md#map-obj-o-map-obj)
 * [obj\( arr.typename a \) obj](obj.md#obj-arr-typename-a-obj)
 * [obj\( bool b \) obj](obj.md#obj-bool-b-obj)
 * [obj\( float f \) obj](obj.md#obj-float-f-obj)
@@ -88,6 +89,10 @@
 ### item\(obj o, str s\) obj
 
 Функция _item_ возвращает значение ключа **s**. Объект должен иметь тип **map.obj**. Если элемент отсутствует, то возвращается пустой объект.
+
+### map\(obj o\) map.obj
+
+Функция _map_ возвращает ассоциативный массив объектов. Объект _o_ должен быть ассоциативным массивом (map), в противном случае возвращается ошибка. При вызове функции не создается нового массива, а возвращается текущий *map*, который содержит объект _o_.
 
 ### obj\(arr.typename a\) obj
 
