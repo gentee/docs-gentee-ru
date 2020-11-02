@@ -3,6 +3,7 @@
 Тип **obj** служит для хранения значений следующих типов - **int, bool, float, str, arr.obj, map.obj**. Если объекту не присвоено никакое значение, то он равен **nil**. Объекту можно присваивать значения  типа, который отличается от текущего.  
 Здесь описаны операторы и функции для работы с объектами.
 
+* [arr\( obj o \) arr.obj](obj.md#arr-obj-o-arr-obj)
 * [bool\( obj o \) bool](obj.md#bool-obj-o-bool)
 * [bool\( obj o, bool def \) bool](obj.md#bool-obj-o-bool-def-bool)
 * [float\( obj o \) float](obj.md#float-obj-o-float)
@@ -18,9 +19,16 @@
 * [obj\( int i \) obj](obj.md#obj-int-i-obj)
 * [obj\( map.typename m \) obj](obj.md#obj-map-typename-m-obj)
 * [obj\( str s \) obj](obj.md#obj-str-s-obj)
+* [Sort\( arr.obj o, cmpobjfunc cmpfunc \) arr.obj](obj.md#sort-arr-obj-o-cmpobjfunc cmpfunc-arr-obj)
 * [str\( obj o \) str](obj.md#str-obj-o-str)
 * [str\( obj o, str def \) str](obj.md#str-obj-o-str-def-str)
 * [Type\( obj o \) str](obj.md#type-obj-o-str)
+
+## Типы
+
+### fn cmpobjfunc(obj, obj) int
+
+Тип функций **cmpobjtype** служит для сравнения двух объектов. Функции этого типа используются для сортировки объектов в массиве.
 
 ## Операторы
 
@@ -35,11 +43,15 @@
 | obj **=** map.typename | obj | Присваивание ассоциативного массива объекту. |
 | obj **=** obj | obj | Присваивание объектов. |
 | obj **=** str | obj | Присваивание строки объекту. |
+| obj **+=** obj | obj | Добавление объекта к массиву объектов. |
 | obj **&=** obj | obj | Создать клон объекта. Новая переменная будет работать с тем же набором данных. |
 | obj **\[** int/str **\]** | obj | Присвоить/получить значение массива по индексу. Если объект не является _arr.obj_ или _map.obj_, то возвращается ошибка. |
 
-
 ## Функции
+
+### arr\(obj o\) arr.obj
+
+Функция _arr_ возвращает массив объектов. Объект _o_ должен быть массивом, в противном случае возвращается ошибка. При вызове функции не создается нового массива, а возвращается текущий массив, который содержит объект _o_.
 
 ### bool\(obj o\) bool
 
@@ -100,6 +112,25 @@
 ### obj\(str s\) obj
 
 Функция _obj_ создает объект с указанными **str** значением.
+
+### Sort\(arr.obj o, cmpobjfunc cmpfunc\) arr.obj
+
+Функция _Sort_ сортирует массив объектов и возвращает его. Сортировка происходит с помощью функции типа **cmpobjfunc**.
+
+``` go
+func mySort(obj left, obj right) int {
+  if str(left) < str(right) : return -1
+  if str(left) > str(right) : return 1
+  return 0
+}
+
+run str {
+  arr a = {"qwr","7","10","ab","тест","абв", "ka"}
+  obj o = a
+  Sort( arr(o), &mySort.cmpobjfunc )
+  ...
+}
+```
 
 ### str\(obj o\) str
 
