@@ -12,6 +12,7 @@
 * [FileInfo\( str name \) finfo](file.md#fileinfo-str-name-finfo)
 * [FileMode\( str name \) int](file.md#filemode-str-name-int)
 * [GetCurDir\(\) str](file.md#getcurdir-str)
+* [IsEmptyDir\( str path \) bool](file.md#isemptydir-str-path-bool)
 * [Md5File\( str filename \) str](file.md#md-5-file-str-filename-str)
 * [obj\( finfo fi \) obj](file.md#obj-finfo-fi-obj)
 * [ReadDir\( str dirname \) arr.finfo](file.md#readdir-str-dirname-arr-finfo)
@@ -82,6 +83,10 @@
 ### GetCurDir\(\) str
 
 Функция _GetCurDir_ возвращает текущую директорию.
+
+### IsEmptyDir\(str path\) bool
+
+Функция _IsEmptyDir_ возвращает _true_, если указанная директория пустая. В противном случае, возвращается _false_.
 
 ### Md5File\(str filename\) str
 
