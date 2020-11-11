@@ -2,12 +2,22 @@
 
 Здесь описаны функции для работы с регулярными выражениями.
 
+* [FindFirstRegExp\( str src, str re \) arr.str](regexp.md#findfirstregexp-str-src-str-re-arr-str)
 * [FindRegExp\( str src, str re \) arr.arr.str](regexp.md#findregexp-str-src-str-re-arr-arr-str)
 * [Match\( str s, str re \) bool](regexp.md#match-str-s-str-re-bool)
 * [RegExp\( str src, str re \) str](regexp.md#regexp-str-src-str-re-str)
 * [ReplaceRegExp\( str src, str re, str repl \) str](regexp.md#replaceregexp-str-src-str-re-str-repl-str)
 
 ## Функции
+
+### FindFirstRegExp\(str src, str re\) arr.str
+
+Функция _FindFirstRegExp_ находит первое вхождение регулярного выражения _re_ в указанной строке _src_. Функция возвращает массив строк. Первый элемент содержит подстроку совпадающую с регулярным выражением, остальные элементы содержат значения групп **(...)**, если они определены в регулярном выражении.
+
+```go
+arr.str a &= FindFirstRegExp(`This45i33s a isi777s inis1i2sg`, `is(\d*)i(\d+)s`)
+// a = {`is45i33s`, `45`, `33`}
+```
 
 ### FindRegExp\(str src, str re\) arr.arr.str
 
