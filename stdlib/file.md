@@ -17,6 +17,7 @@
 * [obj\( finfo fi \) obj](file.md#obj-finfo-fi-obj)
 * [ReadDir\( str dirname \) arr.finfo](file.md#readdir-str-dirname-arr-finfo)
 * [ReadDir\( str dirname, int flags, str pattern \) arr.finfo](file.md#readdir-str-dirname-int-flags-str-pattern-arr-finfo)
+* [ReadDir\( str dirname, int flags, arr.str patterns, arr.str ignore \) arr.finfo](file.md#readdir-str-dirname-int-flags-arr-str-patterns-arr-str-ignore-arr-finfo)
 * [ReadFile\( str filename \) str](file.md#readfile-str-filename-str)
 * [ReadFile\( str filename, buf out \) buf](file.md#readfile-str-filename-buf-out-buf)
 * [ReadFile\( str filename, int offset, int length \) buf](file.md#readfile-str-filename-int-offset-int-length-buf)
@@ -99,6 +100,43 @@
 ### ReadDir\(str dirname\) arr.finfo
 
 Функция _ReadDir_ читает директорию с указанным именем и возвращает список её поддиректорий и файлов.
+
+### ReadDir\(str dirname, int flags, str pattern\) arr.finfo
+
+Функция _ReadDir_ читает директорию *dirname* с указанным именем и возвращает список её поддиректорий и файлов в соотвествии с указанными параметрами. Параметр *flags* может быть комбинацией следующих флагов:
+
+* **RECURSIVE** - В этом случае будет рекурсивный поиск по всем поддиректориям.
+* **ONLYFILES** - Возвращаемый массив будет содержать только файлы.
+* **ONLYDIRS** - Возвращаемый массив будет содержать только директории.
+* **REGEXP** - Параметр *pattern* содержит регулярное выражения для сравнения имён файлов.
+
+Если вы укажете одновременно флаги **ONLYFILES** и **ONLYDIRS**, то будут искаться файлы и директории.
+
+Параметр *pattern* может содержать маску для файлов или регулярное выражение. В этом случае, будут возвращаться файлы и директории, которые соответствуют указанному шаблону. Маска может содержать следующие символы:
+
+* '\*' - любая последовательность, кроме символа разделителя
+* '?' - любой одиночный символ, кроме символа разделителя
+
+``` go
+for item in ReadDir(ftemp, RECURSIVE, `*fold*`) {
+    ret += item.Name
+}
+for item in ReadDir(ftemp, RECURSIVE | ONLYFILES | REGEXP, `.*\.pdf`) {
+    ret += item.Name
+}
+```
+
+### ReadDir\(str dirname, int flags, arr.str patterns, arr.str ignore\) arr.finfo
+
+Функция _ReadDir_ читает директорию *dirname* с указанным именем и возвращает список её поддиректорий и файлов в соотвествии с указанными параметрами. Параметр *flags* описан выше. Параметр *patterns* является массивом строк и может содержать маски для файлов или регулярные выражения. Параметр *ignore* также содержит маски для файлов или регулярные выражения, но такие файлы или директории будут пропускаться. Если вы хотите указать в этих массивах регулярное выражение, то заключите его между символами **'/'**.
+
+``` go
+arr.str aignore = {`/txt/`, `*.pak`}
+arr.str amatch = {`/\d+/`, `*.p??`, `/di/`}
+for item in ReadDir(ftemp, RECURSIVE, amatch, aignore) {
+    ret += item.Name
+}
+```
 
 ### ReadDir\(str dirname, int flags, str pattern\) arr.finfo
 
