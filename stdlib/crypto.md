@@ -37,4 +37,3 @@ buf crypted = AESEncrypt(`my password`, buf(`Test message`))
 ### Sha256\(buf\|str data\) buf
 
 Функция _Sha256_ возвращает SHA256 хэш переменной типа _buf_ или _str_.
-
