@@ -11,8 +11,10 @@
 * [EncodeInt\( buf b, int i \) buf](buffer.md#encodeint-buf-b-int-i-buf)
 * [Hex\( buf b \) str](buffer.md#hex-buf-b-str)
 * [Insert\( buf b, int off, buf src\) buf](buffer.md#insert-buf-b-int-off-buf-src-buf)
+* [SetLen\( buf b, int size \) buf](buffer.md#setlen-buf-b-int-size-buf)
 * [UnBase64\( str s \) buf](buffer.md#unbase-64-str-s-buf)
 * [UnHex\( str s \) buf](buffer.md#unhex-str-s-buf)
+* [Write\( buf b, int off, buf src \) buf](buffer.md#write-buf-b-int-off-buf-src-buf)
 
 ## Операторы
 
@@ -67,6 +69,10 @@
 
 Функция _Insert_ вставляет массив байт _src_ в массив _b_. _off_ - смещение, куда будет вставлен указанный массив байт. Функция возвращает переменную _b_.
 
+### SetLen\(buf b, int size\) buf
+
+Функция _SetLen_ устанавливает размер буфера. Если _size_ меньше размера буфера, то он будет обрезан. В противном случае, буфер будет дополнен нулями до указанного размера.
+
 ### UnBase64\(str s\) buf
 
 Функция _UnBase64_ преобразует строку в кодировке **base64** в значение типа _buf_ и возвращает его.
@@ -75,3 +81,6 @@
 
 Функция _UnHex_ преобразует шестнадцатеричную строку в значение типа _buf_ и возвращает его. Входящая строка должна содержать только шестнадцатеричные символы.
 
+### Write\(buf b, int off, buf src\) buf
+
+Функция _Write_ записывает массив байт переменной _src_ в переменную _b_ начиная с указанного смещения. Данные записываются поверх существующих значений. Функция возвращает переменную _b_.
