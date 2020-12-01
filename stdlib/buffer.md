@@ -6,7 +6,9 @@
 * [buf\( str s \) buf](buffer.md#buf-str-s-buf)
 * [str\( buf b \) str](buffer.md#str-buf-b-str)
 * [Base64\( buf b \) str](buffer.md#base-64-buf-b-str)
+* [DecodeInt\( buf b, int offset \) int](buffer.md#decodeint-buf-b-int-offset-int)
 * [Del\( buf b, int off, int length \) buf](buffer.md#del-buf-b-int-off-int-length-buf)
+* [EncodeInt\( buf b, int i \) buf](buffer.md#encodeint-buf-b-int-i-buf)
 * [Hex\( buf b \) str](buffer.md#hex-buf-b-str)
 * [Insert\( buf b, int off, buf src\) buf](buffer.md#insert-buf-b-int-off-buf-src-buf)
 * [UnBase64\( str s \) buf](buffer.md#unbase-64-str-s-buf)
@@ -45,9 +47,17 @@
 
 Функция _Base64_ преобразует значение типа _buf_ в строку в кодировке **base64** и возвращает её.
 
+### DecodeInt\(buf b, int offset\) int
+
+Функция _DecodeInt_ получает целое число из параметра типа _buf_. _offset_ - смещение в буфере, по которому необходимо прочитать число. Функция читает 8 байт и возвращает их как целое число.
+
 ### Del\(buf b, int off, int length\) buf
 
 Функция _Del_ удалять часть данных из массива байт. _off_ - смещение удаляемых данных, _length_ - количество удаляемых байт. Если _length_ меньше нуля, то данные будут удаляться слева от указанного смещения. Функция возвращает переменную _b_, в которой произошло удаление.
+
+### EncodeInt\(buf b, int i\) buf
+
+Функция _EncodeInt_ добавляет целое число к указанной переменной типа _buf_. Так как значение *int* занимает 8 байт, то к буферу добавляется 8 байт независимо от значения параметра _i_. Функция возвращает параметр *b*.
 
 ### Hex\(buf b\) str
 
