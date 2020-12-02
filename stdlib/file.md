@@ -5,16 +5,20 @@
 * [AppendFile\( str filename, buf \| str data \)](file.md#appendfile-str-filename-buf-or-str-data)
 * [ChDir\( str dirname \)](file.md#chdir-str-dirname)
 * [ChMode\( str name, int mode \)](file.md#chmode-str-name-int-mode)
+* [CloseFile\( file f \)](file.md#closefile-file-f)
 * [CopyFile\( str src, str dest \) int](file.md#copyfile-str-src-str-dest-int)
 * [CreateDir\( str dirname \)](file.md#createdir-str-dirname)
 * [CreateFile\( str name, bool trunc \)](file.md#createfile-str-name-bool-trunc)
 * [ExistFile\( str name \) bool](file.md#existfile-str-name-bool)
+* [FileInfo\( file f \) finfo](file.md#fileinfo-file-f-finfo)
 * [FileInfo\( str name \) finfo](file.md#fileinfo-str-name-finfo)
 * [FileMode\( str name \) int](file.md#filemode-str-name-int)
 * [GetCurDir\(\) str](file.md#getcurdir-str)
 * [IsEmptyDir\( str path \) bool](file.md#isemptydir-str-path-bool)
 * [Md5File\( str filename \) str](file.md#md-5-file-str-filename-str)
 * [obj\( finfo fi \) obj](file.md#obj-finfo-fi-obj)
+* [OpenFile\( str filename, int flags \) file](file.md#openfile-str-filename-int-flags-file)
+* [Read\( file f, int size \) buf](file.md#read-file-f-int-size-buf)
 * [ReadDir\( str dirname \) arr.finfo](file.md#readdir-str-dirname-arr-finfo)
 * [ReadDir\( str dirname, int flags, str pattern \) arr.finfo](file.md#readdir-str-dirname-int-flags-str-pattern-arr-finfo)
 * [ReadDir\( str dirname, int flags, arr.str patterns, arr.str ignore \) arr.finfo](file.md#readdir-str-dirname-int-flags-arr-str-patterns-arr-str-ignore-arr-finfo)
@@ -25,9 +29,11 @@
 * [RemoveDir\( str dirname \)](file.md#removedir-str-dirname)
 * [Rename\( str oldpath, str newpath \)](file.md#rename-str-oldpath-str-newpath)
 * [SetFileTime\( str name, time modtime \)](file.md#setfiletime-str-name-time-modtime)
+* [SetPos\( file f, int off, int whence \) int](file.md#setpos-file-f-int-off-int-whence-int)
 * [Sha256File\( str filename \) str](file.md#sha-256-file-str-filename-str)
 * [TempDir\(\) str](file.md#tempdir-str)
 * [TempDir\( str path, str prefix \) str](file.md#tempdir-str-path-str-prefix-str)
+* [Write\( file f, buf b \) file](file.md#write-file-f-buf-b-file)
 * [WriteFile\( str filename, buf \| str data \)](file.md#writefile-str-filename-buf-or-str-data)
 
 ## Типы
@@ -43,6 +49,10 @@
 * **bool IsDir** - true, если это директория
 * **str Dir** - директория, где расположен файл. Данное поле заполняется только при вызове функции [ReadDir(str, int, str)](file.md#readdir-str-dirname-int-flags-str-pattern-arr-finfo).
 
+### file
+
+Тип _file_ используется в функциях, которые работают с дескриптором открытого файла.
+
 ## Функции
 
 ### AppendFile\(str filename, buf\|str data\)
@@ -56,6 +66,10 @@
 ### ChMode\(str name, int mode\)
 
 Функция _ChMode_ изменяет атрибуты файла.
+
+### CloseFile\(file f\)
+
+Функция _CloseFile_ закрывает дескриптор файла, который был открыт с помощью функции **OpenFile**.
 
 ### CopyFile\(str src, str dest\) int
 
@@ -72,6 +86,10 @@
 ### ExistFile\(str name\) bool
 
 Функция _ExistFile_ возвращает *true*, если указанный файл или директория существует. В противном случае, возвращается *false*.
+
+### FileInfo\(file f\) finfo
+
+Функция _FileInfo_ получает информацию об указанном файле и возвращает структуру _finfo_. Файл должен быть октрыт с помощью функции **OpenFile**.
 
 ### FileInfo\(str name\) finfo
 
@@ -96,6 +114,26 @@
 ### obj\(finfo fi\) obj
 
 Функция _obj_ конвертирует переменную типа finfo в объект. Полученный объект имеет поля: *name, size, mode, time, isdir, dir*.
+
+### OpenFile\(str filename, int flags\) file
+
+Функция _OpenFile_ открывает указанный файл и возвращает переменную типа _file_ с дескриптором открытого файла. После работы с файлом дескриптор открытого файла должен быть закрыт с помощью функции **CloseFile**. Параметр _flags_ может быть комбинацией следующих флагов:
+
+* *CREATE* - если файл не существует, то он будет создан.
+* *TRUNC* - файл будет обрезан до нулевой длины после открытия.
+* *READONLY* - файл будет открыт только для чтения.
+
+``` go
+    file f = OpenFile(fname, CREATE)
+    Write(f, buf("some test string"))
+    SetPos(f, -15, 1)
+    buf b &= Read(f, 5)
+    CloseFile(f)
+```
+
+### Read\(file f, int size\) buf
+
+Функция _Read_ читает _size_ количество байт с текущей позиции в файле, который был открыт с помощью функции **OpenFile**. Функция возвращает переменную типа _buf_, которая содержит прочитанные данные.
 
 ### ReadDir\(str dirname\) arr.finfo
 
@@ -166,6 +204,14 @@ for item in ReadDir(ftemp, RECURSIVE, amatch, aignore) {
 
 Функция _SetFileTime_ изменяет время последней записи у указанного файла.
 
+### SetPos\(file f, int off, int whence\) int
+
+Функция _SetPos_ устанавливает в файле текущую позицию для операций чтения или записи. Файл должен быть открыт с помощью функции **OpenFile**. Функция возвращает смещение новой позиции. Параметр _whence_ может принимать следующие значения:
+
+* *0* - смещение _off_ указано от начало файла.
+* *1* - смещение _off_ указано от текущей позиции.
+* *2* - смещение _off_ указано от конца файла.
+
 ### Sha256File\(str filename\) str
 
 Функция _Sha256File_ возвращает SHA256 хэш указанного файла в виде шестнадцатеричной строки.
@@ -178,7 +224,10 @@ for item in ReadDir(ftemp, RECURSIVE, amatch, aignore) {
 
 Функция _TempDir_ создает новую временную директорию в директории _path_ с именем, начинающемся на _prefix_ и возвращает полное имя этой новой директории. Если _path_ пустая строка, _TempDir_ использует временную директорию по умолчанию.
 
+### Write\(file f, buf b\) file
+
+Функция _Write_ записывает данные из переменной типа _buf_ в файл, который был открыт с помощью функции **OpenFile**. Функция возвращает параметр _f_.
+
 ### WriteFile\(str filename, buf\|str data\)
 
 Функция _WriteFile_ записывает данные из переменной типа _buf_ или строки в файл _filename_. Если файл не существует, то он будет создан с разрешениями 0777, в противном случае, файл будет перезаписан заново.
-
