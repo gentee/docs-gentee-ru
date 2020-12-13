@@ -12,6 +12,7 @@
 * [Hex\( buf b \) str](buffer.md#hex-buf-b-str)
 * [Insert\( buf b, int off, buf src\) buf](buffer.md#insert-buf-b-int-off-buf-src-buf)
 * [SetLen\( buf b, int size \) buf](buffer.md#setlen-buf-b-int-size-buf)
+* [Subbuf\( buf b, int off, int length \) buf](buffer.md#subbuf-buf-b-int-off-int-length-buf)
 * [UnBase64\( str s \) buf](buffer.md#unbase-64-str-s-buf)
 * [UnHex\( str s \) buf](buffer.md#unhex-str-s-buf)
 * [Write\( buf b, int off, buf src \) buf](buffer.md#write-buf-b-int-off-buf-src-buf)
@@ -72,6 +73,10 @@
 ### SetLen\(buf b, int size\) buf
 
 Функция _SetLen_ устанавливает размер буфера. Если _size_ меньше размера буфера, то он будет обрезан. В противном случае, буфер будет дополнен нулями до указанного размера.
+
+### Subbuf\(buf b, int off, int length\) buf
+
+Функция _Subbuf_ возвращает возвращает новый буфер, который содержит фрагмент буфера _b_ с указанным смещением и длиной.
 
 ### UnBase64\(str s\) buf
 
