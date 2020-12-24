@@ -12,6 +12,7 @@
   * [Многопоточность](syntax/multithreading.md)
   * [Включение и импорт файлов](syntax/include-and-import.md)
 * [Стандартная библиотека](stdlib/README.md)
+  * [Архивация](stdlib/archive.md)
   * [Ассоциативные массивы](stdlib/map.md)
   * [Буфер](stdlib/buffer.md)
   * [Время](stdlib/time.md)

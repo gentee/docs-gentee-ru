@@ -44,7 +44,7 @@ MatchPath(`*.txt`, `myfile.txt`)       // true
 MatchPath(`?a?.pdf`, `1ab.pdf`)        // true
 MatchPath(`/home/ak/my.pdf`, `*.pdf`)         // false
 MatchPath(`/home/ak/my.pdf`, `/home/*/my.*`)  // true
-MatchPath(`/\/user\//`, `/home/user/myfile`) // true
+MatchPath(`/user/`, `/home/user/myfile`) // true
 ```
 
 ### Path\(finfo fi\) str
