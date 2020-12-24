@@ -8,6 +8,7 @@
 * [Ext\( str path \) str](path.md#ext-str-path-str)
 * [JoinPath\( str path... \) str](path.md#joinpath-str-path-str)
 * [MatchPath\( str pattern, str path \) bool](path.md#matchpath-str-pattern-str-path-bool)
+* [Path\( finfo fi \) str](path.md#path-finfo-fi-str)
 
 ## Функции
 
@@ -33,7 +34,7 @@
 
 ### MatchPath\(str pattern, str path\) bool
 
-Функция _MatchPath_ проверяет, подходит ли данное имя к указанному шаблону. Функция проверяет шаблон полностью для указанного пути, а не для подстроки.
+Функция _MatchPath_ проверяет, подходит ли данное имя к указанному шаблону. Функция проверяет шаблон полностью для указанного пути, а не для подстроки. Вы можете в качестве шаблона использовать регулярное выражение. Для этого, добавьте в начало и конец символ */*.
 
 * '\*' - любая последовательность, кроме символа разделителя
 * '?' - любой одиночный символ, кроме символа разделителя
@@ -43,5 +44,9 @@ MatchPath(`*.txt`, `myfile.txt`)       // true
 MatchPath(`?a?.pdf`, `1ab.pdf`)        // true
 MatchPath(`/home/ak/my.pdf`, `*.pdf`)         // false
 MatchPath(`/home/ak/my.pdf`, `/home/*/my.*`)  // true
+MatchPath(`/\/user\//`, `/home/user/myfile`) // true
 ```
 
+### Path\(finfo fi\) str
+
+Функция _Path_ объединяет поля *Name* и *Dir* в переменной типа *finfo* и возвращает полученный путь.
