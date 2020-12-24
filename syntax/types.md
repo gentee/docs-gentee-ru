@@ -10,7 +10,7 @@ TypeName  = identifier  { "." identifier }
 
 Язык Gentee содержит следующие предопределенные типы.
 
-**arr bool buf char error finfo float int map obj range set str time trace thread**
+**arr bool buf char error finfo float handle int map obj range set str time trace thread**
 
 | Имя | Описание | Значения | Начальное значение |
 | :--- | :--- | :--- | :--- |
@@ -24,6 +24,9 @@ TypeName  = identifier  { "." identifier }
 | **buf** | массив байт | последовательность uint8 | пустой массив |
 | **set** | массив bool | последовательность uint64 по 1 биту на значение | пустоe множество |
 | **obj** | объект | int, bool, float, str, arr.obj, map.obj | nil |
+| **handle** | скрытый тип | любые типы на Go | nil |
+
+Тип **handle** используется для передачи значений между встроенными Golang функциями. Переменная данного типа может содержать значение любого Golang типа. Go функции должны следить за типами полученных значений, которые в Gentee описаны как *handle*.
 
 ```go
 arr.map.int a
