@@ -21,7 +21,7 @@ import (
 func main() {
     g := gentee.New()
 
-    exec,_, err := g.Compile("run : print(`Hello, world!`)", "")
+    exec,_, err := g.Compile("run : Print(`Hello, world!`)", "")
     if err != nil {
         log.Fatal(err)
     }
