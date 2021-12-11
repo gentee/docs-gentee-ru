@@ -4,9 +4,11 @@
 
 * [Lock\(\)](threads.md#lock)
 * [resume\( thread th \)](threads.md#resume-thread-th)
+* [SetThreadData\(obj o\)](threads.md#setthreaddata-obj-o)
 * [sleep\( int duration \)](threads.md#sleep-int-duration)
 * [suspend\( thread th \)](threads.md#suspend-thread-th)
 * [terminate\( thread th \)](threads.md#terminate-thread-th)
+* [ThreadData\(\) obj](threads.md#threaddata-obj)
 * [Unlock\(\)](threads.md#unlock)
 * [wait\( thread th \)](threads.md#wait-thread-th)
 * [WaitAll\(\)](threads.md#waitall)
@@ -29,6 +31,10 @@
 
 Функция _resume_ продолжает работу потока, который был остановлен функцией _suspend_.
 
+### SetThreadData\(obj o\)
+
+Функция _SetThreadData_ присваивает текущему потоку переменную типа _obj_. Значение переменной может быть получено функцией _ThreadData_.
+
 ### sleep\(int duration\)
 
 Функция _sleep_ останавливает выполнение текущего потока на как минимум _duration_ миллисекунд.
@@ -40,6 +46,10 @@
 ### terminate\(thread th\)
 
 Функция _terminate_ прекращает работу потока. Если поток уже завершен, то функция ничего не делает.
+
+### ThreadData\(\) obj
+
+Функция _ThreadData_ возвращает объект, который был присвоен текущему потоку. Переменная типа _obj_ присваивается потоку функцией _SetThreadData_.
 
 ### Unlock\(\)
 
